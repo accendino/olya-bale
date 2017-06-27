@@ -1,0 +1,24 @@
+{
+  "name": "gulp-webinar-test",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Olya Olya <achendina.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/accendino/olya-bale",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap-grid": "^3.3.6-beta.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "open-sans-all": "^0.1.2"
+  }
+}

@@ -27,5 +27,7 @@
     "gulp-usemin": "^0.3.28",
     "run-sequence": "^1.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
 }
