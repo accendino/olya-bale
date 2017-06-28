@@ -1,0 +1,15 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Регистрация'
+	- var bodyClass = 'small'
+
+
+block content
+
+	.authenticate
+		+logoSmall('login.html', 'Вход')
+
+		+authenticateCard('Регистрация', 'E-mail', 'Пароль', 'Данный email уже занят', 'Используйте другой (!) email чтобы создать новый аккаунт.', 'Регистрация')
+
+		+footerSmall
