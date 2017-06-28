@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Вход</title>
+    <meta content="" name="author"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/><!-- build:vendorCss css/vendor.css -->
+    <link rel="stylesheet" href="bower/bootstrap-grid/dist/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="node_modules/reset.css/reset.css"/>
+    <link rel="stylesheet" href="bower/open-sans-all/css/open-sans.min.css"/><!-- endbuild -->
+<!-- build:userCss css/user.css -->
+    <link rel="stylesheet" href="css/main.css"/><!-- endbuild -->
+<!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body class="small">
+    <div class="authenticate">
+      <div class="authenticate__block">
+        <div class="authenticate__logo"><a class="fa fa-paper-plane-o" href="mailto:achendina@gmail.com" aria-hidden="true"></a><span>О</span>Супер сайт</div>
+        <div class="authenticate__links"><a href="register.html">Регистрация</a></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 col-md-4 col-md-push-4">
+            <div class="authenticate__card">
+              <div class="authenticate__name">
+                <h3>Войти на сайт
+                </h3>
+              </div>
+              <form class="authenticate__form" id="authenticate-form">
+                <input class="authenticate__input" type="text" name="email" placeholder="E-mail"/>
+                <input class="authenticate__input" type="text" name="password" placeholder="Пароль"/>
+                <div class="check-visible">
+                  <label id="checkbox">
+                    <input class="checkbox" type="checkbox"/><span class="checkbox-fake"></span><a href="#">Забыл пароль</a>
+                  </label>
+                </div>
+                <input class="authenticate__submit" type="submit" value="Войти"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© Юрий Ключевский</p>
+        <p>Создано с <i class="fa fa-heart" aria-hidden="true"></i> в <span>WebCademy.ru</span> в 2017 году</p>
+      </footer>
+    </div><!-- build:vendorJs js/vendor.js -->
+    <script src="bower/jquery/dist/jquery.min.js" defer="defer"></script><!-- endbuild -->
+<!-- build:userJs js/user.js -->
+    <script src="js/main.js" defer="defer"></script><!-- endbuild -->
+  </body>
+</html>

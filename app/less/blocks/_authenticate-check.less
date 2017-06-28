@@ -1,0 +1,55 @@
+.check-visible{
+	position: relative;
+	
+	#checkbox{
+		font-size: 13px;
+		color: #FFF;
+		font-weight: 400;
+		padding: 0 15px;
+		display: flex;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		
+		a{
+			color: #FFF;
+		}
+
+		.checkbox-fake{
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/checkNon.png');
+			
+			&:after{
+				content: "Запомнить";
+				position: absolute;
+				color: #FFF;
+				left: 13%;
+				width: 0;
+				height: 0;
+			}
+		}
+
+	.checkbox:checked + .checkbox-fake {           //
+		background-image: url('../img/icons/check.png');
+	}
+
+	.checkbox{
+		display: none;	
+	}
+
+	@media (min-width: 768px) {
+		//font-size: 15px;		
+	}
+	@media (min-width: 992px) {
+		font-size: 15px;
+	}
+	@media (min-width: 1200px) {
+        //font-size: 15px;
+    }	
+}
+
+}
