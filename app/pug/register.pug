@@ -7,9 +7,8 @@ block variables
 
 block content
 
-	.authenticate
-		+logoSmall('login.html', 'Вход')
+	+logo('logo-small', 'Супер сайт', 'hidden', 'showed', 'hidden')
 
-		+authenticateCard('Регистрация', 'E-mail', 'Пароль', 'Данный email уже занят', 'Используйте другой (!) email чтобы создать новый аккаунт.', 'Регистрация')
+	+authenticateCard('Регистрация', 'E-mail', 'Пароль', 'Данный email уже занят', 'Используйте другой (!) email чтобы создать новый аккаунт.', 'Регистрация')
 
-		+footerSmall
+	+footerSmall

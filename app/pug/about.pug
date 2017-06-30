@@ -1,19 +1,12 @@
 extends ./templates/_template.pug
 
 block variables
-	- var title = 'Контакты'
+	- var title = 'Обо мне'
 	- var bodyClass = 'big'
 
 
 block content
 
 	+logo('logo-big', 'Digital Lifestyle', 'showed', 'showed', 'showed')
-
-	h1 Контакты
-
-	include ./blocks/_welcome.pug
-
-	+button("Кнопка 1", "google.com")
-	+button("Кнопка 2", "rambler.ru")
 
 	+footerSmall

@@ -7,16 +7,34 @@ mixin blog-post-preview(title, img)
 			| Читать
 
 
-mixin logoSmall(link, text)
-	.authenticate__block
-		.authenticate__logo
-			a(href="mailto:achendina@gmail.com", aria-hidden="true",).fa.fa-paper-plane-o
-			span
-				| О
-			| Супер сайт
-		.authenticate__links
-			a(href=link)
-				= text
+mixin logo(logoClass, logoText, regDisplay, logDisplay, navDisplay)
+	.authenticate__block(class=logoClass)
+		.authenticate__blockTop
+			.authenticate__logo
+				a(href="mailto:achendina@gmail.com",     aria-hidden="true",).fa.fa-paper-plane-o
+				span
+					| v
+				= logoText
+			.authenticate__links
+				a(href='register.html', class=regDisplay)
+					| Регистрация
+				a(href='login.html', class=logDisplay)
+					| Вход
+		.authenticate__nav(class=navDisplay)
+			p
+				| Сайт IT специалиста
+			nav
+				a(href='index.html')
+					| Главная
+				a(href='about.html')
+					| Обо мне
+				a(href='works.html')
+					| Работы
+				a(href='blog.html')
+					| Блог
+				a(href='contacts.html')
+					| Контакты
+
 
 mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, value)
 	.container
@@ -45,9 +63,6 @@ mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, v
 									a(href='#')
 										| восстановлением пароля
 									|, чтобы войти на сайт.
-
-
-
 						input(type="text", name='email', placeholder=placeholder1).authenticate__input
 						input(type="text", name='password', placeholder=placeholder2).authenticate__input
 						.check-visible
@@ -57,6 +72,7 @@ mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, v
 								a(href='#')
 									| Забыл пароль
 						input(type="submit", value=value).authenticate__submit
+						
 
 mixin footerSmall
 	footer.footer
