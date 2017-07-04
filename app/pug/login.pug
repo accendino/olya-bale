@@ -1,0 +1,14 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Вход'
+	- var bodyClass = 'small'
+
+
+block content
+
+	+logo('logo-small', 'Супер сайт', 'showed', 'hidden', 'hidden')
+
+	+authenticateCard('Вход на сайт', 'E-mail', 'Пароль', 'Неверный email или пароль', 'Введите верные данные для входа!', 'Войти')
+
+	+footerSmall

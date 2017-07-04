@@ -7,36 +7,72 @@ mixin blog-post-preview(title, img)
 			| Читать
 
 
-mixin logoSmall(link, text)
-	.authenticate__block
-		.authenticate__logo
-			a(href="mailto:achendina@gmail.com", aria-hidden="true",).fa.fa-paper-plane-o
-			span
-				| О
-			| Супер сайт
-		.authenticate__links
-			a(href=link)
-				= text
+mixin logo(logoClass, logoText, regDisplay, logDisplay, navDisplay)
+	.authenticate__block(class=logoClass)
+		.authenticate__blockTop
+			.authenticate__logo
+				a(href="mailto:achendina@gmail.com",     aria-hidden="true",).fa.fa-paper-plane-o
+				span
+					| v
+				= logoText
+			.authenticate__links
+				a(href='register.html', class=regDisplay)
+					| Регистрация
+				a(href='login.html', class=logDisplay)
+					| Вход
+		.authenticate__nav(class=navDisplay)
+			p
+				| Сайт IT специалиста
+			nav
+				a(href='index.html')
+					| Главная
+				a(href='about.html')
+					| Обо мне
+				a(href='works.html')
+					| Работы
+				a(href='blog.html')
+					| Блог
+				a(href='contacts.html')
+					| Контакты
 
-mixin authenticateCard(text, placeholder1, placeholder2, value)
+
+mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, value)
 	.container
 		.row
-			.col-xs-10.col-xs-push-1.col-sm-6.col-sm-push-3.col-md-4.col-md-push-4
+			.col-xs-7.col-xs-push-2.col-sm-4.col-sm-push-4
 				.authenticate__card
 					.authenticate__name
 						h3
 							= text
 					form(id="authenticate-form").authenticate__form
+						.authenticate__error
+							p
+								| Введите E-mail
+						.authenticate__error
+							p
+								| Введите пароль
+
+						.authenticate__error(id="authenticate__error")
+							p
+								= errorWarn
+							.authenticate__info
+								p
+									=errorText
+								p
+									| Или воспользуйтесь 
+									a(href='#')
+										| восстановлением пароля
+									|, чтобы войти на сайт.
 						input(type="text", name='email', placeholder=placeholder1).authenticate__input
 						input(type="text", name='password', placeholder=placeholder2).authenticate__input
 						.check-visible
 							label(id="checkbox")
 								input(type="checkbox").checkbox
 								span.checkbox-fake
-														
 								a(href='#')
 									| Забыл пароль
 						input(type="submit", value=value).authenticate__submit
+						
 
 mixin footerSmall
 	footer.footer
