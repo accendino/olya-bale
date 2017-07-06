@@ -26,42 +26,36 @@
         <div class="authenticate__links"><a class="showed" href="register.html">Регистрация</a><a class="hidden" href="login.html">Вход</a></div>
       </div>
     </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-7 col-xs-push-2 col-sm-4 col-sm-push-4">
-          <div class="authenticate__card">
-            <div class="authenticate__name">
-              <h3>Вход на сайт
-              </h3>
-            </div>
-            <form class="authenticate__form" id="authenticate-form">
-              <div class="authenticate__error">
-                <p>Введите E-mail</p>
-              </div>
-              <div class="authenticate__error">
-                <p>Введите пароль</p>
-              </div>
-              <div class="authenticate__error" id="authenticate__error">
-                <p>Неверный email или пароль
-                </p>
-                <div class="authenticate__info">
-                  <p>Введите верные данные для входа!
-                  </p>
-                  <p>Или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.</p>
-                </div>
-              </div>
-              <input class="authenticate__input" type="text" name="email" placeholder="E-mail"/>
-              <input class="authenticate__input" type="text" name="password" placeholder="Пароль"/>
-              <div class="check-visible">
-                <label id="checkbox">
-                  <input class="checkbox" type="checkbox"/><span class="checkbox-fake"></span><a href="#">Забыл пароль</a>
-                </label>
-              </div>
-              <input class="authenticate__submit" type="submit" value="Войти"/>
-            </form>
+    <div class="authenticate__card">
+      <div class="authenticate__name">
+        <h3>Вход на сайт
+        </h3>
+      </div>
+      <form class="authenticate__form" id="authenticate-form">
+        <div class="authenticate__error">
+          <p>Введите E-mail</p>
+        </div>
+        <div class="authenticate__error">
+          <p>Введите пароль</p>
+        </div>
+        <div class="authenticate__error" id="authenticate__error">
+          <p>Неверный email или пароль
+          </p>
+          <div class="authenticate__info">
+            <p>Введите верные данные для входа!
+            </p>
+            <p>Или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.</p>
           </div>
         </div>
-      </div>
+        <input class="authenticate__input" type="text" name="email" placeholder="E-mail"/>
+        <input class="authenticate__input" type="text" name="password" placeholder="Пароль"/>
+        <div class="check-visible">
+          <label id="checkbox">
+            <input class="checkbox" type="checkbox"/><span class="checkbox-fake"></span><a href="#">Забыл пароль</a>
+          </label>
+        </div>
+        <input class="authenticate__submit" type="submit" value="Войти"/>
+      </form>
     </div>
     <footer class="footer-small">
       <p>© Юрий Ключевский</p>

@@ -6,15 +6,23 @@
 	z-index: 77;
 	padding: 0 10px;
 	margin: auto;
+	width: 50%;
+	position: relative;
 	
+	@media (min-width: 500px) {
+	width: 40%;
+    }	
+    @media (min-width: 650px) {
+	width: 30%;
+    }		
 	@media (min-width: 768px) {
-	//padding: 0 30px;
+	width: 30%;
     }
     @media (min-width: 992px) {
     padding: 0 20px;
+	width: 22.5%;
     }
     @media (min-width: 1200px) {
-    //padding: 0 30px;
     }	
 
 .authenticate__name{
