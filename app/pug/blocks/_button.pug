@@ -1,3 +1,6 @@
 mixin button(text, link)
 	a(href= link).button 
 		= text
+
+mixin button(buttonValue)
+	input(type="submit", value=buttonValue).authenticate__submit

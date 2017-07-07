@@ -1,32 +1,11 @@
-mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, value)
+mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, buttonValue)
 	.authenticate__card
 		.authenticate__name
 			h3
 				= text
 		form(id="authenticate-form").authenticate__form
-			.authenticate__error
-				p
-					| Введите E-mail
-			.authenticate__error
-				p
-					| Введите пароль
-			.authenticate__error(id="authenticate__error")
-				p
-					= errorWarn
-				.authenticate__info
-					p
-						=errorText
-					p
-						| Или воспользуйтесь 
-						a(href='#')
-							| восстановлением пароля
-						|, чтобы войти на сайт.
+			+authenticateError(errorWarn, errorText)
 			input(type="text", name='email', placeholder=placeholder1).authenticate__input
 			input(type="text", name='password', placeholder=placeholder2).authenticate__input
-			.check-visible
-				label(id="checkbox")
-					input(type="checkbox").checkbox
-					span.checkbox-fake
-					a(href='#')
-						| Забыл пароль
-			input(type="submit", value=value).authenticate__submit
+			include _checkbox.pug
+			+button(buttonValue)
