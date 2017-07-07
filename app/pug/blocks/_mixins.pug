@@ -1,7 +1,7 @@
-mixin blog-post-preview(title, img)
-	article.blog-post-preview
-		img(src= img).blog-post-preview__img
-		h4.blog-post-preview__title
-			= title
-		a(href= link).blog-post-preview__link 
-			| Читать
+mixin blog-post-preview(img, title, buttonValue, link)
+	.col-xs-12.col-sm-4
+		article.blog__preview
+			img(src= img).blog__img
+			h4.blog__title
+				= title
+			+button(buttonValue, link)
