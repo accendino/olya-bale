@@ -1,2 +1,40 @@
-footer.footer
-	| Копирайт © 2017
+<!-- footer -->	
+.footer(id="footer")
+	.container
+		.row
+			
+			<!-- col -->
+			.col-xs-12.col-sm-4
+				include _footer-small.pug
+			<!-- colEnd -->
+
+			<!-- col -->
+			.col-xs-12.col-sm-4
+									ul.footer__nav
+										li
+											a(href="#")
+												| Главная
+										li
+											a(href="#")
+												| Обо мне
+										li
+											a(href="#")
+												| Работы
+										li
+											a(href="#")
+												| Блог
+										li
+											a(href="#")
+												| Контакты
+			<!-- colEnd -->
+
+			<!-- col -->
+			.col-xs-12.col-sm-4
+									.social
+										a(href="https://vk.com/id2356431" target="blank" aria-hidden="true").fa.fa-vk
+										a(href="http://instagram.com/olya_bale" target="blank" aria-hidden="true").fa.fa-instagram
+										a(href="https://www.facebook.com/olga.belousova.3348" target="blank" aria-hidden="true").fa.fa-facebook
+										a(href="https://github.com/accendino" target="blank" aria-hidden="true").fa.fa-github
+			<!-- colEnd -->
+
+			<!-- footerEnd -->
