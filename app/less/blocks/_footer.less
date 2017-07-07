@@ -1,6 +1,12 @@
 .footer{
 	background-color: @grey;
     position: absolute; right: 0; bottom: 0; width: 100%;
+        
+    .col-xs-12,.col-sm-4{
+        @media (max-width: 767px){
+            padding: 0;
+        }
+    }
     
     .footer-small{
         position: inherit;
