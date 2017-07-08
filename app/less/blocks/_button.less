@@ -1,14 +1,14 @@
-	.authenticate__submit{
+	.submit-button{
 		font-size: 10px;
 		margin: 15px 0 20px;
 		padding: 5px 25px 5px 25px;
 		font-weight: 700;
 		font-family: 'Open Sans'; 
-		color: #037ec6;	
+		color: @blue;
+        border-color: @blueLight !important;	
 		text-align: center;	
-		border: none;
-		color: #fff;
-		border: 2px solid #fff;
+		//border: none;
+		border: 2px solid;
 		-webkit-border-radius: 80px;
 		border-radius: 80px;
 		background-color: transparent;
@@ -18,15 +18,13 @@
 		-o-transition: all 0.3s ease-in;
 		transition: all 0.3s ease-in;
 
-		&:hover, &:focus{		
-			background-color: #fff;
-			color: @blue;
+		&:hover{		
+			background-color: @blueLight;
 		}
 
 		&:active{
-			color: @blue;
-			border-color: @blue;
-		    background-color: rgba(37, 37, 37, 0.8); //transparent;
+			color: @grey;
+			border-color: @greyLight !important;
 	    } 
 
 	@media (min-width: 768px) {

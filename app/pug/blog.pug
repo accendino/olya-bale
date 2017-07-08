@@ -9,23 +9,23 @@ block content
 
 	include ./blocks/_header.pug
 
-	.container.blog
-		.row
+	.container.preview__container(id='padding-big')
+		.row.preview__row
 			.col-sm-6.col-md-4
-				h3.blog__name
+				h3.preview__name
 					| Блог веб-разработчика
-		.row.blog__section
-			+blog-post-preview('img/blog/01-prev.jpg', 'Поездка в New York', 'Читать', '#')
-			+blog-post-preview('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
-			+blog-post-preview('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
-		.row.blog__section
-			+blog-post-preview('img/blog/04-prev.jpg', 'Поездка в New York', 'Читать', '#')
-			+blog-post-preview('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
-			+blog-post-preview('img/blog/05-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
-		.row.blog__section
-			+blog-post-preview('img/blog/01-prev.jpg', 'Поездка в New York', 'Читать', '#')
-			+blog-post-preview('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
-			+blog-post-preview('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
+		.row.preview__row
+			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Читать', '#')
+			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
+			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
+		.row.preview__row
+			+previewCard('img/blog/04-prev.jpg', 'Поездка в New York', 'Читать', '#')
+			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
+			+previewCard('img/blog/05-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
+		.row.preview__row
+			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Читать', '#')
+			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
+			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
 
 	footer
 		include ./blocks/_footer.pug

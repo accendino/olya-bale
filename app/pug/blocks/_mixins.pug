@@ -1,7 +1,7 @@
-mixin blog-post-preview(img, title, buttonValue, link)
+mixin previewCard(img, title, buttonValue, link)
 	.col-xs-12.col-sm-4
-		article.blog__preview
-			img(src= img).blog__img
-			h4.blog__title
+		article.preview__card
+			img(src= img).preview__img
+			h4.preview__title
 				= title
 			+button(buttonValue, link)
