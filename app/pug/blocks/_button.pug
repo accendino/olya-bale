@@ -1,3 +1,6 @@
-mixin button(text, link)
+mixin buttonFirst(text, link)
 	a(href= link).button 
 		= text
+
+mixin button(buttonValue, link)
+	input(type="submit", value=buttonValue, link=link).submit-button

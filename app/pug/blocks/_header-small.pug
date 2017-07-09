@@ -1,0 +1,14 @@
+mixin headerSmall(regClass, logClass)
+	header.header
+		.header__left
+			.logo
+				a(href="./index.html").logo__link
+					i.fa.fa-paper-plane-o.logo__icon
+					span.logo__title
+						| Супер Сайт
+		.header__right
+			.authenticate__links
+				a(href='register.html', class=regClass)
+					| Регистрация
+				a(href='login.html', class=logClass)
+					| Вход

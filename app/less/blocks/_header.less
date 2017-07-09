@@ -1,4 +1,4 @@
-.header {
+body.big .header {
 	background-image: url('../img/logo-bg.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -6,7 +6,13 @@
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;  
-	
+}
+
+body.small .header{
+	height: 26%;
+}
+
+.header{
 	&:after,&:before {
 		clear: both;
 		content: "";
@@ -20,4 +26,5 @@
 
 .header__right {
 	float: right;
+	position: relative;
 }

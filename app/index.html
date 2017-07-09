@@ -27,26 +27,127 @@
       <div class="header__right">
         <div class="authenticate__links"><a class="showed" href="register.html">Регистрация</a><a class="showed" href="login.html">Вход</a></div>
       </div>
-    </header>
-    <h1>Главная страница</h1><a class="button" href="google.com"> Кнопка 1</a><a class="button" href="rambler.ru"> Кнопка 2</a>
-    <article class="blog-post-preview"><img class="blog-post-preview__img" src="img/blog/01-prev.jpg"/>
-      <h4 class="blog-post-preview__title">Название поста 1
-      </h4><a class="blog-post-preview__link">
-         Читать</a>
-    </article>
-    <article class="blog-post-preview"><img class="blog-post-preview__img" src="img/blog/01-prev.jpg"/>
-      <h4 class="blog-post-preview__title">Название поста 2
-      </h4><a class="blog-post-preview__link">
-         Читать</a>
-    </article>
-    <article class="blog-post-preview"><img class="blog-post-preview__img" src="img/blog/01-prev.jpg"/>
-      <h4 class="blog-post-preview__title">Название поста 3
-      </h4><a class="blog-post-preview__link">
-         Читать</a>
-    </article>
-    <footer class="footer">
-      <p>© Юрий Ключевский</p>
-      <p>Создано с <i class="fa fa-heart" aria-hidden="true"></i> в <span>WebCademy.ru</span> в 2017 году</p>
+    </header><!-- Резюме -->	    
+    <div class="container cv-section">
+      <div class="row"><!-- Фото пользователя -->
+        <div class="hidden-xs col-sm-2 col-lg-3">
+          <div class="user-photo"></div>
+        </div><!-- //Фото пользователя -->	    
+        <div class="col-sm-10 col-lg-9"><!-- Обо мне -->
+          <div class="heading">Ольга Бэйл</div>
+          <div class="cv-section__content">
+            <p>Я веб разработчик из Казани. Мне 28 лет.</p>
+            <p>Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+          </div>
+          <div class="cv-section__content">
+            <p>
+               Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.</p>
+            <p>
+               Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+          </div><!-- Обо мне -->
+<!-- Что я умею -->	
+          <div class="heading heading--2">Что я умею</div>
+          <div class="cv-section__content">
+            <p>Меня привлекет Frontend разработка, это не только моя работа, но и хобби.</p>
+            <p>Также знаком и могу решать не сложные задачи на Backend.</p>
+          </div>
+          <div class="cv-section__content">
+            <p>Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p>
+          </div><!-- //Что я умею -->
+          <input class="submit-button" type="submit" value="Подробнее" link="usercontent/pdf/cv.pdf"/>
+        </div>
+      </div>
+    </div><!-- //Резюме -->
+<!-- Новые работы -->
+    <div class="container preview__container">
+      <div class="row preview__row">
+        <div class="col-sm-6 col-md-4">
+          <h3 class="preview__name">Новые работы</h3>
+        </div>
+      </div>
+      <div class="row preview__row">
+        <div class="col-xs-12 col-sm-4">
+          <article class="preview__card"><img class="preview__img" src="img/blog/01-prev.jpg"/>
+            <h4 class="preview__title">Поездка в New York
+            </h4>
+            <input class="submit-button" type="submit" value="Смотреть кейс" link="#"/>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <article class="preview__card"><img class="preview__img" src="img/blog/02-prev.jpg"/>
+            <h4 class="preview__title">Что я делал в долине
+            </h4>
+            <input class="submit-button" type="submit" value="Смотреть кейс" link="#"/>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <article class="preview__card"><img class="preview__img" src="img/blog/03-prev.jpg"/>
+            <h4 class="preview__title">Как я ходил в поход
+            </h4>
+            <input class="submit-button" type="submit" value="Смотреть кейс" link="#"/>
+          </article>
+        </div>
+      </div>
+    </div><!-- //Новые работы -->
+<!-- Новые записи в блоге -->
+    <div class="container preview__container" id="padding-big">
+      <div class="row preview__row">
+        <div class="col-sm-6 col-md-4">
+          <h3 class="preview__name">Новые записи в блоге</h3>
+        </div>
+      </div>
+      <div class="row preview__row">
+        <div class="col-xs-12 col-sm-4">
+          <article class="preview__card"><img class="preview__img" src="img/blog/01-prev.jpg"/>
+            <h4 class="preview__title">Поездка в New York
+            </h4>
+            <input class="submit-button" type="submit" value="Читать" link="#"/>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <article class="preview__card"><img class="preview__img" src="img/blog/02-prev.jpg"/>
+            <h4 class="preview__title">Что я делал в долине
+            </h4>
+            <input class="submit-button" type="submit" value="Читать" link="#"/>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <article class="preview__card"><img class="preview__img" src="img/blog/03-prev.jpg"/>
+            <h4 class="preview__title">Как я ходил в поход
+            </h4>
+            <input class="submit-button" type="submit" value="Читать" link="#"/>
+          </article>
+        </div>
+      </div>
+    </div><!-- //Новые записи в блоге -->
+    <footer><!-- footer -->	
+      <div class="footer" id="footer">
+        <div class="container">
+          <div class="row"><!-- col -->
+            <div class="col-xs-12 col-sm-4">
+              <footer class="footer-small">
+                <p>© Ольга Бэйл</p>
+                <p>Создано с <i class="fa fa-heart" aria-hidden="true"></i> в <a href="http://WebCademy.ru">WebCademy.ru</a> в 2017 году</p>
+              </footer>
+            </div><!-- colEnd -->
+<!-- col -->
+            <div class="col-xs-12 col-sm-4">
+              <ul class="footer__nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="works.html">Работы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </div><!-- colEnd -->
+<!-- col -->
+            <div class="col-xs-12 col-sm-4">
+              <div class="social"><a class="fa fa-vk" href="https://vk.com/id2356431" target="blank" aria-hidden="true"></a><a class="fa fa-instagram" href="http://instagram.com/olya_bale" target="blank" aria-hidden="true"></a><a class="fa fa-facebook" href="https://www.facebook.com/olga.belousova.3348" target="blank" aria-hidden="true"></a><a class="fa fa-github" href="https://github.com/accendino" target="blank" aria-hidden="true"></a></div>
+            </div><!-- colEnd -->
+<!-- footerEnd -->
+          </div>
+        </div>
+      </div>
     </footer><!-- build:vendorJs js/vendor.js -->
     <script src="bower/jquery/dist/jquery.min.js" defer="defer"></script><!-- endbuild -->
 <!-- build:userJs js/user.js -->

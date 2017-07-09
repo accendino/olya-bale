@@ -1,0 +1,18 @@
+mixin authenticateError(errorWarn, errorText)
+	.authenticate__error
+		p
+			| Введите E-mail
+	.authenticate__error
+		p
+			| Введите пароль
+	.authenticate__error(id="authenticate__error")
+		p
+			= errorWarn
+		.authenticate__info
+			p
+				=errorText
+			p
+				| Или воспользуйтесь 
+				a(href='#')
+					| восстановлением пароля
+				|, чтобы войти на сайт.

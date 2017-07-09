@@ -7,6 +7,25 @@ block variables
 
 block content
 
-	//- +logo('logo-big', 'Digital Lifestyle', 'showed', 'showed', 'showed')
-	
-	+footerSmall
+	include ./blocks/_header.pug
+
+	.container.preview__container(id='padding-big')
+		.row.preview__row
+			.col-sm-6.col-md-4
+				h3.preview__name
+					| Мои работы
+		.row.preview__row
+			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Перейти', '#')
+			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Перейти', '#')
+			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Перейти', '#')
+		.row.preview__row
+			+previewCard('img/blog/04-prev.jpg', 'Поездка в New York', 'Перейти', '#')
+			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Перейти', '#')
+			+previewCard('img/blog/05-prev.jpg', 'Как я ходил в поход', 'Перейти', '#')
+		.row.preview__row
+			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Перейти', '#')
+			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Перейти', '#')
+			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Перейти', '#')
+
+	footer
+		include ./blocks/_footer.pug

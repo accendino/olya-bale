@@ -7,8 +7,8 @@ block variables
 
 block content
 
-	//- +logo('logo-small', 'Супер сайт', 'showed', 'hidden', 'hidden')
+	+headerSmall('showed', 'hidden')
 
 	+authenticateCard('Вход на сайт', 'E-mail', 'Пароль', 'Неверный email или пароль', 'Введите верные данные для входа!', 'Войти')
 
-	+footerSmall
+	include ./blocks/_footer-small.pug
