@@ -17,7 +17,7 @@
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
-  <body class="small">
+  <body class="small flex-direction-column">
     <header class="header">
       <div class="header__left">
         <div class="logo"><a class="logo__link" href="./index.html"><i class="fa fa-paper-plane-o logo__icon"></i><span class="logo__title">Супер Сайт</span></a></div>
@@ -51,7 +51,13 @@
         <input class="authenticate__input" type="text" name="password" placeholder="Пароль"/>
         <div class="check-visible">
           <label class="flex-direction-row" id="checkbox">
-            <input class="checkbox" type="checkbox"/><span class="checkbox-fake"></span><a href="#">Забыл пароль</a>
+            <div class="flex-direction-row">
+              <input class="checkbox" type="checkbox"/><span class="checkbox-fake"></span>
+              <div class="checkbox-text">
+                <p>Запомнить</p>
+              </div>
+            </div>
+            <div><a href="#">Забыл пароль</a></div>
           </label>
         </div><a class="button" href="#">Войти</a>
       </form>

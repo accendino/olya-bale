@@ -1,6 +1,11 @@
 .check-visible
 	label(id="checkbox").flex-direction-row
-		input(type="checkbox").checkbox
-		span.checkbox-fake
-		a(href='#')
-			| Забыл пароль
+		div.flex-direction-row
+			input(type="checkbox").checkbox
+			span.checkbox-fake
+			.checkbox-text
+				p
+					| Запомнить
+		div
+			a(href='#')
+				| Забыл пароль

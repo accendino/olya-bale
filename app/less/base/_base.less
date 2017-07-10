@@ -10,30 +10,13 @@ body.small{
 	height: 100%;
 	max-width: 100%;
 	width: 100%;
-	background-image: url("../img/nainoa-shizuru-58159.png");	
+	background: linear-gradient(to bottom, @gradient 0%, transparent 25%, transparent 80%, @gradient 100%), url("../img/nainoa-shizuru-58159.png");	
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
-	display: flex;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
-	
-	&:before{
-		position: absolute;	
-		content: "";		
-		background: linear-gradient(to bottom, @gradient 0%, transparent 25%, transparent 80%, @gradient 100%);		
-		background-position: center;
-		background-repeat: no-repeat;
-	    height: 100%;
-        width: 100%;
-    }	
 }
 
 body.big{
@@ -42,12 +25,6 @@ body.big{
 	height: 100%;
 	max-width: 100%;
 	width: 100%;
-	display: flex;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
 }
 
 .flex-direction-row{
@@ -59,7 +36,7 @@ body.big{
 	        justify-content: space-between;
 }
 
-.flex-direction-colimn{
+.flex-direction-column{
 	display: flex;
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
