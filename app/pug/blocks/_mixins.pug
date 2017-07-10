@@ -5,3 +5,26 @@ mixin previewCard(img, title, buttonValue, link)
 			h4.preview__title
 				= title
 			+button(buttonValue, link)
+
+
+mixin userPhoto(userPhotoLink, modificatorClass)
+	.user-photo(style=userPhotoLink, class=modificatorClass)
+
+
+mixin review(userPhotoLink, modificatorClass, userName, date, text)
+	<!-- Отдельный комментарий -->
+	.review
+		.hidden-xs.col-sm-1
+			+userPhoto(userPhotoLink, modificatorClass)
+		.col-sm-6
+			.section__content.section__content--comments
+				.blog-info.blog-info--fullWidth
+						ul
+							li.blog-info__element.blog-info__element--userName.color-grey
+								= userName
+							li.blog-info__element.blog-info__element--userDate.color-greyLight
+								i(aria-hidden="true").fa.fa-clock-o
+								= date
+				p
+					= text
+	<!-- //Отдельный комментарий -->

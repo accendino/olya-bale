@@ -10,44 +10,46 @@ block content
 	include ./blocks/_header.pug
 
 	<!-- Резюме -->	    
-	.container.cv-section
+	.container.section
 		.row
 			<!-- Фото пользователя -->
 			.hidden-xs.col-sm-2.col-lg-3
-				.user-photo
+				+userPhoto('background-image: url(usercontent/img/photo-big.jpg)', 'modificator-none')
 			<!-- //Фото пользователя -->	    
 
 			.col-sm-10.col-lg-9
 				<!-- Обо мне -->
 				.heading
 					| Ольга Бэйл
-				.cv-section__content
+				.section__content
 					p
 						| Я веб разработчик из Казани. Мне 28 лет.
 					p
 						| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-				.cv-section__content
+				.section__content
 					p 
 						| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
 					p 
 						| Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-				<!-- Обо мне -->
+				<!-- //Обо мне -->
 
 				<!-- Что я умею -->	
 				.heading.heading--2
 					| Что я умею
-				.cv-section__content
+				.section__content
 					p
 						| Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
 					p
 						| Также знаком и могу решать не сложные задачи на Backend.
-				.cv-section__content
+				.section__content
 					p
 						| Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
 				<!-- //Что я умею -->
 
 				+button('Подробнее', 'usercontent/pdf/cv.pdf')
 	<!-- //Резюме -->
+
+	.line
 
 	<!-- Новые работы -->
 	.container.preview__container
@@ -56,7 +58,7 @@ block content
 				h3.preview__name
 					| Новые работы
 		.row.preview__row
-			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Смотреть кейс', '#')
+			+previewCard('img/blog/06-prev.jpg', 'Поездка в New York', 'Смотреть кейс', '#')
 			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Смотреть кейс', '#')
 			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Смотреть кейс', '#')
 	<!-- //Новые работы -->
@@ -68,7 +70,7 @@ block content
 				h3.preview__name
 					| Новые записи в блоге
 		.row.preview__row
-			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Читать', '#')
+			+previewCard('img/blog/01-prev.jpg', 'Парк Йосемити', 'Читать', '#')
 			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Читать', '#')
 			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Читать', '#')
 	<!-- //Новые записи в блоге -->

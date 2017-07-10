@@ -1,13 +1,14 @@
-	.submit-button{
+	.button{
+		display: inline-block;
 		font-size: 10px;
 		margin: 15px 0 20px;
 		padding: 5px 25px 5px 25px;
 		font-weight: 700;
 		font-family: 'Open Sans'; 
 		color: @blue;
-        border-color: @blueLight !important;	
+        border-color: @blueLight !important;
+	    text-decoration: none;			
 		text-align: center;	
-		//border: none;
 		border: 2px solid;
 		-webkit-border-radius: 80px;
 		border-radius: 80px;
@@ -26,6 +27,13 @@
 			color: @grey;
 			border-color: @greyLight !important;
 	    } 
+
+	    i.fa-arrow-left{
+		padding-right: 5px;		
+	    }
+	    i.fa-arrow-right{
+		padding-left: 5px;		
+	    }
 
 	@media (min-width: 768px) {
 		font-size: 13px;

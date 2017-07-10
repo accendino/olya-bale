@@ -1,0 +1,49 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Национальный парк Йосемити'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_header.pug
+
+	.container.section(id='padding-big')
+		.row
+			.col-sm-10.col-sm-push-1
+				.heading.heading--black
+					| Национальный парк Йосемити
+				.blog-info
+					ul.flex-direction-row
+						li.blog-info__element.color-grey
+							| Ольга Бэйл
+						li.blog-info__element.color-blue
+							| Путешествия
+						li.blog-info__element.color-greyLight
+							| 07 Июля 2017
+						li.blog-info__element.color-blue
+							| 2 комментария
+				img(src='./img/blog/yosemite-national-park.jpg').blog-photo
+				.section__content
+					p
+						| Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. 
+				.section__content
+					p
+						| Центром парка является долина Йосемити, круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками.
+
+				.flex-direction-row
+					+buttonArrowLeft('#')
+					+buttonArrowRight('#')
+
+				<!-- Комментарии -->
+				.heading.heading--2
+					| 2 комментария
+
+				.flex-direction-colimn
+					+review('background-image: url(usercontent/img/users/user-photo-01.jpg)', 'user-photo--small', 'Джон До', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательо отправлюсь туда этим летом.')
+					+review('background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--small', 'Джоанна До', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательо отправлюсь туда этим летом.')
+				<!-- Комментарии -->
+
+	footer
+		include ./blocks/_footer.pug

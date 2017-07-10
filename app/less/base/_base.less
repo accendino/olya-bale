@@ -18,6 +18,13 @@ body.small{
 	-o-background-size: cover;
 	background-size: cover;
 	
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	
 	&:before{
 		position: absolute;	
 		content: "";		
@@ -41,4 +48,49 @@ body.big{
 	        flex-direction: column;
 	-webkit-justify-content: space-between;
 	        justify-content: space-between;
+}
+
+.flex-direction-row{
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+
+.flex-direction-colimn{
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.color-blue{
+	color: @blue;
+}	
+
+.color-grey{
+	color: @grey;
+}
+
+.color-greyLight{
+	color: @greyLight;
+}
+
+.line{
+	border-top: 1px solid #eaeff5;
+}
+
+#padding-big{
+        padding-bottom: 22px;
+        @media (min-width: 768px){    
+        padding-bottom: 45px;
+        }
+        @media (min-width: 992px){    
+        padding-bottom: 58px;
+        }
+        @media (min-width: 1200px){    
+        padding-bottom: 70px;
+        }
 }	
