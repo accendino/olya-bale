@@ -7,20 +7,7 @@
 		font-size: 9px;
 		color: #FFF;
 		font-weight: 400;
-		//padding: 0 15px;
-		display: flex;
-		-webkit-flex-direction: row;
-		-ms-flex-direction: row;
-		flex-direction: row;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		
-		a{
-			color: #FFF;
-			padding-top: 5px;
-			width: 50%;
-			text-align: right;
-		
+		padding-top: 15px;
 		    @media (min-width: 768px) {
 		    padding-top: 2px;            
             }
@@ -29,41 +16,43 @@
             }
             @media (min-width: 1200px) {
 		    padding-top: 0;
-            }  
+            }   
+		
+		a{
+			color: #FFF;
+			width: 40%; //50%;
+			text-align: right;		
 		}
 
 		.checkbox-fake{
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 8.8px;
+			height: 8.8px;
 			background-image: url('../img/icons/checkNon.png');
-			
-			&:after{
-				content: "Запомнить";
-				position: absolute;
-				color: #FFF;
-				left: 27px; 
-                top: 5px;
-				width: 0;
-				height: 0;
-				
-				@media (min-width: 768px) {
-                left: 30px;
-                top: 2px; 
-                }
-                @media (min-width: 992px) {
-                //left: 30px;  
-                //top: 2px;     
-                }
-                @media (min-width: 1200px) {
-                //left: 45px;  
-                top: 0px; 
-                }   
-			}
+			margin-top: 2px;
+			@media (min-width: 768px) {
+		    width: 12.8px;
+			height: 12.8px;	
+			margin-top: 2px;	
+	        }
+	        @media (min-width: 992px) {
+		    width: 16.53px;
+			height: 16.53px;
+			margin-top: 0px;
+	        }
+	        @media (min-width: 1200px) {
+            width: 20px;
+			height: 20px;
+            }				
 		}
 
 	.checkbox:checked + .checkbox-fake {           //
 		background-image: url('../img/icons/check.png');
+		background-repeat: no-repeat;
+	    background-position: center;
+	    -webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 	}
 
 	.checkbox{
@@ -79,6 +68,26 @@
 	@media (min-width: 1200px) {
         font-size: 14px;
     }	
+}
+
+.checkbox-text{
+	//color: #FFF;
+	margin-left: 3.5px;
+	p{
+		margin: 0;
+	}
+				
+		@media (min-width: 768px) {
+		//padding-top: 2px;  
+	    margin-left: 4.8px;		               
+        }
+        @media (min-width: 992px) {
+        margin-left: 6.2px;   
+        }
+        @media (min-width: 1200px) {
+		//padding-top: 0; 
+	    margin-left: 7.5px;		               
+        }
 }
 
 }

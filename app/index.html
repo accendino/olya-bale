@@ -17,7 +17,7 @@
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
-  <body class="big">
+  <body class="big flex-direction-column">
     <header class="header">
       <div class="header__left">
         <div class="logo"><a class="logo__link" href="./index.html"><i class="fa fa-paper-plane-o logo__icon"></i><span class="logo__title">Digital Lifestyle</span>
@@ -28,37 +28,36 @@
         <div class="authenticate__links"><a class="showed" href="register.html">Регистрация</a><a class="showed" href="login.html">Вход</a></div>
       </div>
     </header><!-- Резюме -->	    
-    <div class="container cv-section">
+    <div class="container section">
       <div class="row"><!-- Фото пользователя -->
         <div class="hidden-xs col-sm-2 col-lg-3">
-          <div class="user-photo"></div>
+          <div class="user-photo modificator-none" style="background-image: url(usercontent/img/photo-big.jpg);"></div>
         </div><!-- //Фото пользователя -->	    
         <div class="col-sm-10 col-lg-9"><!-- Обо мне -->
           <div class="heading">Ольга Бэйл</div>
-          <div class="cv-section__content">
+          <div class="section__content">
             <p>Я веб разработчик из Казани. Мне 28 лет.</p>
             <p>Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
           </div>
-          <div class="cv-section__content">
+          <div class="section__content">
             <p>
                Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.</p>
             <p>
                Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
-          </div><!-- Обо мне -->
+          </div><!-- //Обо мне -->
 <!-- Что я умею -->	
           <div class="heading heading--2">Что я умею</div>
-          <div class="cv-section__content">
+          <div class="section__content">
             <p>Меня привлекет Frontend разработка, это не только моя работа, но и хобби.</p>
             <p>Также знаком и могу решать не сложные задачи на Backend.</p>
           </div>
-          <div class="cv-section__content">
+          <div class="section__content">
             <p>Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p>
-          </div><!-- //Что я умею -->
-          <input class="submit-button" type="submit" value="Подробнее" link="usercontent/pdf/cv.pdf"/>
+          </div><!-- //Что я умею --><a class="button" href="usercontent/pdf/cv.pdf">Подробнее</a>
         </div>
       </div>
     </div><!-- //Резюме -->
-<!-- Новые работы -->
+    <div class="line"></div><!-- Новые работы -->
     <div class="container preview__container">
       <div class="row preview__row">
         <div class="col-sm-6 col-md-4">
@@ -67,24 +66,21 @@
       </div>
       <div class="row preview__row">
         <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/01-prev.jpg"/>
+          <article class="preview__card"><img class="preview__img" src="img/blog/06-prev.jpg"/>
             <h4 class="preview__title">Поездка в New York
-            </h4>
-            <input class="submit-button" type="submit" value="Смотреть кейс" link="#"/>
+            </h4><a class="button" href="#">Смотреть кейс</a>
           </article>
         </div>
         <div class="col-xs-12 col-sm-4">
           <article class="preview__card"><img class="preview__img" src="img/blog/02-prev.jpg"/>
             <h4 class="preview__title">Что я делал в долине
-            </h4>
-            <input class="submit-button" type="submit" value="Смотреть кейс" link="#"/>
+            </h4><a class="button" href="#">Смотреть кейс</a>
           </article>
         </div>
         <div class="col-xs-12 col-sm-4">
           <article class="preview__card"><img class="preview__img" src="img/blog/03-prev.jpg"/>
             <h4 class="preview__title">Как я ходил в поход
-            </h4>
-            <input class="submit-button" type="submit" value="Смотреть кейс" link="#"/>
+            </h4><a class="button" href="#">Смотреть кейс</a>
           </article>
         </div>
       </div>
@@ -99,23 +95,20 @@
       <div class="row preview__row">
         <div class="col-xs-12 col-sm-4">
           <article class="preview__card"><img class="preview__img" src="img/blog/01-prev.jpg"/>
-            <h4 class="preview__title">Поездка в New York
-            </h4>
-            <input class="submit-button" type="submit" value="Читать" link="#"/>
+            <h4 class="preview__title">Парк Йосемити
+            </h4><a class="button" href="#">Читать</a>
           </article>
         </div>
         <div class="col-xs-12 col-sm-4">
           <article class="preview__card"><img class="preview__img" src="img/blog/02-prev.jpg"/>
             <h4 class="preview__title">Что я делал в долине
-            </h4>
-            <input class="submit-button" type="submit" value="Читать" link="#"/>
+            </h4><a class="button" href="#">Читать</a>
           </article>
         </div>
         <div class="col-xs-12 col-sm-4">
           <article class="preview__card"><img class="preview__img" src="img/blog/03-prev.jpg"/>
             <h4 class="preview__title">Как я ходил в поход
-            </h4>
-            <input class="submit-button" type="submit" value="Читать" link="#"/>
+            </h4><a class="button" href="#">Читать</a>
           </article>
         </div>
       </div>
@@ -125,10 +118,10 @@
         <div class="container">
           <div class="row"><!-- col -->
             <div class="col-xs-12 col-sm-4">
-              <footer class="footer-small">
+              <div class="footer-small">
                 <p>© Ольга Бэйл</p>
                 <p>Создано с <i class="fa fa-heart" aria-hidden="true"></i> в <a href="http://WebCademy.ru">WebCademy.ru</a> в 2017 году</p>
-              </footer>
+              </div>
             </div><!-- colEnd -->
 <!-- col -->
             <div class="col-xs-12 col-sm-4">

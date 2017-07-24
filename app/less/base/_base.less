@@ -10,23 +10,13 @@ body.small{
 	height: 100%;
 	max-width: 100%;
 	width: 100%;
-	background-image: url("../img/nainoa-shizuru-58159.png");	
+	background: linear-gradient(to bottom, @gradient 0%, transparent 25%, transparent 80%, @gradient 100%), url("../img/nainoa-shizuru-58159.png");	
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
-	&:before{
-		position: absolute;	
-		content: "";		
-		background: linear-gradient(to bottom, @gradient 0%, transparent 25%, transparent 80%, @gradient 100%);		
-		background-position: center;
-		background-repeat: no-repeat;
-	    height: 100%;
-        width: 100%;
-    }	
 }
 
 body.big{
@@ -35,10 +25,55 @@ body.big{
 	height: 100%;
 	max-width: 100%;
 	width: 100%;
+}
+
+.flex-direction-row{
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+
+.flex-direction-column{
 	display: flex;
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	-webkit-justify-content: space-between;
+	    -webkit-justify-content: space-between;
 	        justify-content: space-between;
+}
+
+.color-blue{
+	color: @blue;
 }	
+
+.color-grey{
+	color: @grey;
+}
+
+.color-greyLight{
+	color: @greyLight;
+}
+
+.line{
+	border-top: 1px solid #eaeff5;
+}
+
+#padding-big{
+        padding-bottom: 22px;
+        @media (min-width: 768px){    
+        padding-bottom: 45px;
+        }
+        @media (min-width: 992px){    
+        padding-bottom: 58px;
+        }
+        @media (min-width: 1200px){    
+        padding-bottom: 70px;
+        }
+}	
+
+.hidden {
+	display: none !important;
+}

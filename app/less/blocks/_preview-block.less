@@ -1,16 +1,3 @@
-#padding-big{
-        padding-bottom: 22px;
-        @media (min-width: 768px){    
-        padding-bottom: 45px;
-        }
-        @media (min-width: 992px){    
-        padding-bottom: 58px;
-        }
-        @media (min-width: 1200px){    
-        padding-bottom: 70px;
-        }
-}
-
 .preview__container{
     .col-xs-12,.col-sm-4{
         @media (max-width: 767px){
@@ -82,9 +69,20 @@
         margin-bottom: 37.5px;
         }
 
-    .submit-button{
-            bottom: 23px;
-            margin: 0;
+    .button{
+        bottom: 23px;
+        margin: 0;
+        padding: 10px 10.25px 10px 10.25px;
+            
+        @media (min-width: 768px) {
+        padding: 7px 19.2px 7px 19.2px;
+        }
+        @media (min-width: 992px) {
+        padding: 8.5px 24.8px 8.5px 24.8px;
+        }
+        @media (min-width: 1200px) {
+        padding: 10px 30px 10px 30px;
+        }
     }
 }
 
@@ -99,13 +97,6 @@ h4.preview__title{
     margin: 0;
     padding-top: 2px;
     padding-bottom: 14px;
-    
-    //white-space: nowrap; /* Отменяем перенос текста */
-    //overflow: hidden; /* Обрезаем содержимое */
-    //padding: 20px; /* Поля */
-    //text-overflow: ellipsis; /* Многоточие */
-    
-    //white-space: pre-wrap;
     
     @media (min-width: 768px){
     font-size: 14px;

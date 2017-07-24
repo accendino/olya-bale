@@ -1,6 +1,13 @@
-mixin buttonFirst(text, link)
+mixin buttonArrowLeft(link)
 	a(href= link).button 
-		= text
+		i(aria-hidden="true").fa.fa-arrow-left
+		| Назад
+
+mixin buttonArrowRight(link)
+	a(href= link).button
+		| Вперед
+		i(aria-hidden="true").fa.fa-arrow-right
 
 mixin button(buttonValue, link)
-	input(type="submit", value=buttonValue, link=link).submit-button
+	a(href=link).button
+		= buttonValue
