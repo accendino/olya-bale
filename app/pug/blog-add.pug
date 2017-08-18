@@ -1,0 +1,18 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Национальный парк Йосемити'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+
+	+editPublication('Добавить пост', 'Название', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'none', '#', 'button--userInfo', 'Выбрать файл', 'файл не выбран', 'hidden', 'Содержание', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'none', '#', '#')
+
+	footer
+		include ./blocks/_footer.pug

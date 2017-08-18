@@ -1,3 +1,5 @@
+//MAIN
+
 html, body {
 	height: 100%;
 	min-width: 320px;
@@ -5,27 +7,67 @@ html, body {
 	font-family: 'Open Sans';
 }
 
-body.small{
+body.big{
+	//background-color: #fff;
 	max-height: 100%;
 	height: 100%;
 	max-width: 100%;
-	width: 100%;
-	background: linear-gradient(to bottom, @gradient 0%, transparent 25%, transparent 80%, @gradient 100%), url("../img/nainoa-shizuru-58159.png");	
+	width: 100%;	
+}
+
+body.big-transparent{		
+}
+
+body.small{	
+	background: linear-gradient(to bottom, @gradient 0%, transparent 25%, transparent 80%, @gradient 100%), url("../img/nainoa-shizuru-58159.png");		
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
-body.big{
-	//background-color: #fff;
-	max-height: 100%;
-	height: 100%;
-	max-width: 100%;
-	width: 100%;
+.hidden {
+	display: none !important;
 }
+//===================================================================
+
+//MAIN TAGS
+
+textarea{
+		height: 100px;
+		//background-color: #fff;
+	}
+
+i{        //p{}
+	
+	margin-right: 8px;
+}
+
+p{
+	font-size: 14px;
+	@media (min-width: 768px){
+	     font-size: 16px;	    
+	}
+}	
+	
+//===================================================================
+
+//BOOTSTRAP-GRID
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		//padding-left: 0;
+		//padding-right: 0;
+}
+
+//===================================================================
+
+//FLEX CLASSES
 
 .flex-direction-row{
 	display: flex;
@@ -37,7 +79,7 @@ body.big{
 }
 
 .flex-direction-column{
-	display: flex;
+	display: flex !important;
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
@@ -45,8 +87,26 @@ body.big{
 	        justify-content: space-between;
 }
 
+.flex-start{
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+}
+
+.flex-end{
+	-webkit-justify-content: flex-end;
+	        justify-content: flex-end;
+}
+
+//===================================================================
+
+//TEXT & BACKGROUND COLOR CLASSES
+
 .color-blue{
 	color: @blue;
+}	
+
+.color-bluePale{
+	color: @bluePale;
 }	
 
 .color-grey{
@@ -57,11 +117,31 @@ body.big{
 	color: @greyLight;
 }
 
-.line{
-	border-top: 1px solid #eaeff5;
+.color-white{
+	color: #fff;
 }
 
-#padding-big{
+.color-black{
+	color: #000;
+}
+
+.color-yellow{
+	color: @yellow;
+}
+
+.background-color-black{
+	background-color: @black;
+}
+
+.background-color-grey{
+	background-color: @grey;
+}
+
+//===================================================================
+
+//PADDING & MARGIN CLASSES
+
+.padding-big{
         padding-bottom: 22px;
         @media (min-width: 768px){    
         padding-bottom: 45px;
@@ -72,8 +152,71 @@ body.big{
         @media (min-width: 1200px){    
         padding-bottom: 70px;
         }
-}	
-
-.hidden {
-	display: none !important;
 }
+
+.padding-medium{
+	padding-bottom: 6.8px;
+        @media (min-width: 768px){    
+        padding-bottom: 12.8px;
+        }
+        @media (min-width: 992px){    
+        padding-bottom: 16.5px;
+        }
+        @media (min-width: 1200px){    
+        padding-bottom: 20px;
+        }
+}
+
+.margin-top-0{
+	margin-top: 0;
+}
+.margin-0{
+	margin: 0;
+}
+
+.margin-left-5{
+	margin-left: 5px;
+}
+
+.padding-0{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.padding-left-0{
+	padding-left: 0;
+}
+
+//===================================================================
+
+//ALIGNs
+
+.text-align-center{
+	text-align: center !important;
+}
+
+//===================================================================
+
+//TEXT SIZEs
+
+.font-size26{
+	font-size: 26px;
+}
+
+.font-size28{
+	font-size: 28px;
+}
+
+.font-weight600{
+	font-weight: 600;
+}
+
+//===================================================================
+
+//ELEMENTS
+
+.line{
+	border-top: 1px solid #eaeff5;
+}
+
+//===================================================================

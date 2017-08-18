@@ -1,0 +1,47 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Профиль'
+	- var bodyClass = 'big'
+
+
+block content
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/small/user-photo-04.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+	
+	.container.section
+		.row
+			.col-sm-10.col-sm-push-1
+				+headingWithEdit('heading--black', 'Профиль', 'hidden', 'none', 'showed', '#', 'button--edit', 'Редактировать')
+		
+				.profile-info.flex-direction-row.flex-start
+					<!-- Фото пользователя -->
+					.coll
+						+userPhoto('background-image: url(usercontent/img/users/big/user-photo-04.jpg)', 'none')
+					<!-- //Фото пользователя -->
+
+					.col-xs-6
+						<!-- Информация пользователя -->
+						.info__element.info__element--userDate.color-greyLight
+							| Имя и фамилия
+						p
+							| Емельян Казаков
+						.info__element.info__element--userDate.color-greyLight
+							| Email
+						p
+							| pilat@mail.ru
+						.info__element.info__element--userDate.color-greyLight
+							| Страна, Город
+						p
+							| Россия, Казань
+						<!-- //Информация пользователя -->
+
+
+				.heading--user-comments
+					| Комментарии пользователя
+				+reviewSmall('Поездка в LA', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+				+reviewSmall('Ноутбук для веб-разработчика', '15 Мая 2017 года в 10:02', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+				+reviewSmall('Настройка Sublime', '12 Мая 2017 года в 20:39', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+
+	footer
+		include ./blocks/_footer.pug

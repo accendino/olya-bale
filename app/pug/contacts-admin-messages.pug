@@ -1,0 +1,28 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Контакты'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_admin-pannel.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+
+	.section
+		.container
+			.row
+				.col-sm-10.col-sm-push-1
+					+headingWithEdit('heading--black', 'Сообщения от посетителей', 'hidden', 'none', 'hidden', 'blog-edit.html', 'button--edit', 'Редактировать')
+
+		.container
+			.row
+				.col-sm-10.col-sm-push-1
+					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.', 'Avrora-platform.pdf')
+					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.', 'Avrora-platform.pdf')
+					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.', 'Avrora-platform.pdf')
+
+	footer
+		include ./blocks/_footer.pug

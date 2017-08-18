@@ -1,0 +1,15 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Контакты'
+	- var bodyClass = 'big'
+
+
+block content
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+
+	include ./blocks/_my-contacts.pug
+
+	footer
+		include ./blocks/_footer.pug

@@ -1,0 +1,28 @@
+.section
+	<!-- Новые работы -->
+	.container
+		.row
+			.col-sm-6
+				.heading.heading--black
+					| Новые 
+					a(href='works.html')
+						| работы
+		.row.preview__row.flex-direction-row
+			+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка Landing Page', '#', 'button--preview', 'Смотреть кейс')
+			+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
+			+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
+	<!-- //Новые работы -->
+
+	<!-- Новые записи в блоге -->
+	.container
+		.row
+			.col-sm-6
+				.heading.heading--black
+					| Новые записи в 
+					a(href='blog.html')
+						| блоге
+		.row.preview__row.flex-direction-row
+			+previewCard('none', 'none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Поездка в New York пример длинного названия поста ...', 'blog-single.html', 'button--preview', 'Читать')
+			+previewCard('hidden-xs','none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Что я делал в долине', 'blog-single.html', 'button--preview', 'Читать')
+			+previewCard('hidden-xs', 'hidden-sm', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Как я ходил в поход этим летом', 'blog-single.html', 'button--preview', 'Читать')
+	<!-- //Новые записи в блоге -->

@@ -1,0 +1,23 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Обо мне'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+	
+	.container.section(id='padding-big')
+		+cv('none', 'Ольга Бэйл', 'hidden', 'none', 'hidden', '#', 'button--edit','Редактировать')
+	
+	include ./blocks/_my-technologies.pug
+
+	.container.section
+		+experienceBlock('hidden')
+
+	footer
+		include ./blocks/_footer.pug

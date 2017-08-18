@@ -1,0 +1,16 @@
+mixin buttonArrowLeft(link)
+	a(href= link).button.button--arrow-left
+		i(aria-hidden="true").fa.fa-arrow-left
+		| Назад
+
+mixin buttonArrowRight(link)
+	a(href= link).button.button--arrow-right
+		| Вперед
+		i(aria-hidden="true").fa.fa-arrow-right
+
+mixin button(link, buttonClass, buttonValue)
+	a(href= link, class= buttonClass).button
+		= buttonValue
+
+mixin submit(buttonClass, submitValue)
+	input(class= buttonClass, value=submitValue, type="submit").button

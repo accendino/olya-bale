@@ -1,0 +1,26 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Главная'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+
+	.container.section
+		+cv('none', 'Ольга Бэйл', 'hidden', 'none', 'hidden', '#', 'button--edit','Редактировать')
+		.row
+			.col-sm-9.col-sm-push-2.col-lg-9.col-lg-push-3
+				+button('usercontent/pdf/cv.pdf', 'button--preview', 'Подробнее')
+	<!-- //Резюме -->
+
+	.line
+
+	include ./blocks/_previews-section.pug
+
+	footer
+		include ./blocks/_footer.pug

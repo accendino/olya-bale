@@ -6,26 +6,38 @@ block variables
 
 
 block content
+	
+	include ./blocks/_navPannel-smallScreen.pug
 
-	include ./blocks/_header.pug
+	+header('navigation-main', 'navigation-main__link', 'showed', 'showed', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 
-	.container.preview__container(id='padding-big')
-		.row.preview__row
-			.col-sm-6.col-md-4
-				h3.preview__name
-					| Мои работы
-		.row.preview__row
-			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Перейти', '#')
-			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Перейти', '#')
-			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Перейти', '#')
-		.row.preview__row
-			+previewCard('img/blog/04-prev.jpg', 'Поездка в New York', 'Перейти', '#')
-			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Перейти', '#')
-			+previewCard('img/blog/05-prev.jpg', 'Как я ходил в поход', 'Перейти', '#')
-		.row.preview__row
-			+previewCard('img/blog/01-prev.jpg', 'Поездка в New York', 'Перейти', '#')
-			+previewCard('img/blog/02-prev.jpg', 'Что я делал в долине', 'Перейти', '#')
-			+previewCard('img/blog/03-prev.jpg', 'Как я ходил в поход', 'Перейти', '#')
+	.section
+		.container
+			.row
+				.col-xs-12
+					+headingWithEdit('heading--black', 'Работы', 'showed', 'которые сделал я и моя команда', 'hidden', 'blog-edit.html', 'button--edit', 'Редактировать')
 
+
+			<!-- Ряд с работами -->
+			.row.preview__row.flex-direction-row
+				+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка Landing Page', '#', 'button--preview', 'Смотреть кейс')
+				+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
+				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
+			<!-- //Ряд с работами -->
+
+			<!-- Ряд с работами -->
+			.row.preview__row.flex-direction-row
+				+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка Landing Page', '#', 'button--preview', 'Смотреть кейс')
+				+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
+				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
+			<!-- //Ряд с работами -->
+
+			<!-- Ряд с работами -->
+			.row.preview__row.flex-direction-row
+				+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка Landing Page', '#', 'button--preview', 'Смотреть кейс')
+				+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
+				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
+			<!-- //Ряд с работами -->
+	
 	footer
 		include ./blocks/_footer.pug

@@ -1,5 +1,5 @@
 mixin headerSmall(regClass, logClass)
-	header.header
+	header.header-small
 		.header__left
 			.logo
 				a(href="./index.html").logo__link
@@ -7,8 +7,4 @@ mixin headerSmall(regClass, logClass)
 					span.logo__title
 						| Супер Сайт
 		.header__right
-			.authenticate__links
-				a(href='register.html', class=regClass)
-					| Регистрация
-				a(href='login.html', class=logClass)
-					| Вход
+			+authenticateLinks(regClass, logClass)

@@ -1,0 +1,28 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Национальный парк Йосемити'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-03.jpg)', 'user-photo--logedUser', 'Юрий Ключевский', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+	
+	.container.section(id='padding-big')
+		.row
+			.col-sm-10.col-sm-push-1
+
+				+headingWithEdit('none', 'Национальный парк Йосемити', 'hidden', 'none', 'hidden', '#', 'button--edit', 'Редактировать')
+
+				include ./blocks/_article.pug
+
+				include ./blocks/_comments.pug
+
+				+writeReview('background-image: url(usercontent/img/users/user-photo-03.jpg)', 'user-photo--review', 'Юрий Ключевский', 'Сейчас', 'Комментарий не может быть пустым.', 'border: none','Присоединиться к обсуждению...', 'button--submit', 'Опубликовать')
+				<!-- //Комментарии -->
+
+	footer
+		include ./blocks/_footer.pug

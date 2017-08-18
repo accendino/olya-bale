@@ -1,0 +1,16 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Работа'
+	- var bodyClass = 'big-transparent'
+
+
+block content
+
+	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+work-single('showed')
+					
+	footer
+		include ./blocks/_footer.pug

@@ -1,0 +1,44 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Блог'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+
+	.section
+		.container
+			.row
+				.col-xs-12
+					+headingWithEdit('heading--black', 'Блог веб-разработчика', 'hidden', 'none', 'hidden', 'blog-edit.html', 'button--edit', 'Редактировать')
+
+
+			<!-- Ряд со статьями -->
+			.row.preview__row.flex-direction-row
+				+previewCard('none', 'none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Поездка в New York пример длинного названия поста ...', 'blog-single.html', 'button--preview', 'Читать')
+				+previewCard('hidden-xs','none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Что я делал в долине', 'blog-single.html', 'button--preview', 'Читать')
+				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Как я ходил в поход этим летом', 'blog-single.html', 'button--preview', 'Читать')
+			<!-- //Ряд со статьями -->
+
+			<!-- Ряд со статьями -->
+			.row.preview__row.flex-direction-row
+				+previewCard('none', 'none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Поездка в New York пример длинного названия поста ...', 'blog-single.html', 'button--preview', 'Читать')
+				+previewCard('hidden-xs','none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Что я делал в долине', 'blog-single.html', 'button--preview', 'Читать')
+				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Как я ходил в поход этим летом', 'blog-single.html', 'button--preview', 'Читать')
+			<!-- //Ряд со статьями -->
+
+			<!-- Ряд со статьями -->
+			.row.preview__row.flex-direction-row
+				+previewCard('none', 'none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Поездка в New York пример длинного названия поста ...', 'blog-single.html', 'button--preview', 'Читать')
+				+previewCard('hidden-xs','none', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Что я делал в долине', 'blog-single.html', 'button--preview', 'Читать')
+				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--blogPicture', 'img/blog/01-prev.jpg', 'Как я ходил в поход этим летом', 'blog-single.html', 'button--preview', 'Читать')
+			<!-- //Ряд со статьями -->
+
+	footer
+		include ./blocks/_footer.pug
