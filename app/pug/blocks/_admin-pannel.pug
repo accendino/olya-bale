@@ -1,0 +1,31 @@
+.hidden-xs.hidden-sm
+	.admin-pannel.flex-direction-row
+		.flex-direction-row.flex-start
+			+adminInfo('showed','background-image: url(usercontent/img/photo-big.jpg)', 'user-photo--admin', 'Ольга Бэйл', '#', 'button--adminInfo', 'Администратор')
+
+			.admin-pannel__nav-left.flex-direction-row
+				a(href="blog-add.html").admin-pannel__link.color-grey
+					i(aria-hidden="true").fa.fa-book
+					| Пост
+					
+				a(href='work-add.html').admin-pannel__link.color-grey
+					i(aria-hidden="true").fa.fa-briefcase
+					| Работа
+					
+				a(href='#').admin-pannel__link.color-grey
+					i(aria-hidden="true").fa.fa-address-card-o
+					| Обо мне
+					
+				a(href='#').admin-pannel__link.color-grey
+					i(aria-hidden="true").fa.fa-volume-control-phone
+					| Контакты
+					
+				a(href='#').admin-pannel__link.color-grey
+					i(aria-hidden="true").fa.fa-commenting-o
+					| Сообщения
+					
+
+		.admin-pannel__nav-right.flex-direction-row
+			a(href='#').admin-pannel__link.color-grey
+				i(aria-hidden="true").fa.fa-sign-out
+				| Выход

@@ -1,0 +1,66 @@
+.container.section(id='padding-big')
+	.row
+		.col-sm-6.flex-direction-column
+
+			.heading.heading--black
+				| Контакты
+
+			.flex-direction-column
+				.flex-direction-row.flex-start
+					.col-sm-4.info__element.info__element--userName
+						| Email
+					.info__element
+						a(href='#').color-blue
+							| ahendina@gmail.ru
+			.flex-direction-row.flex-start
+				.col-sm-4.info__element.info__element--userName
+					| Skype
+				.info__element
+					a(href='#').color-blue
+						| achendina6246
+								
+			.flex-direction-row.flex-start
+				.col-sm-4.info__element.info__element--userName
+					| Социальные сети
+				.flex-direction-column
+					a(href='#').info__element.info__element--userName.color-blue
+						| Профиль Вконтакте
+					a(href='#').info__element.info__element--userName.color-blue
+						| Профиль Facebook
+
+			.flex-direction-row.flex-start
+				.col-sm-4.info__element.info__element--userName
+					| Телефон
+				.info__element
+					| +595-456-123
+			.flex-direction-row.flex-start
+				.col-sm-4.info__element.info__element--userName
+					| Адрес
+				.col-sm-4.info__element
+					| Великобритания, Кент, г. Уитстейбл
+
+
+
+		.col-sm-6.flex-direction-column
+
+			.heading.heading--black
+				| Связаться со мной
+
+			+input('text', 'name', 'border: 1px solid lightgrey', 'Введите имя', 'none')
+			+input('text', 'name', 'border: 1px solid lightgrey', 'Email', 'none')
+
+			+textarea('text', 'name', 'border: 1px solid lightgrey', 'Сообщение', 'none')
+
+			div
+				.info__element.info__element--userName
+					| Прикрепить файл
+			p
+				| jpg, png, pdf, doc, весом до 2Мб.
+			div
+				.flex-direction-row.flex-start
+					+button('#', 'button--submit', 'Выбрать файл')
+					.color-greyLight
+						| my-lovely-photo.jpg
+				+button('#', 'button--submit', 'Отправить')
+
+iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d159478.23930488707!2d1.043174!3d51.350715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d932b34535a97d%3A0xde21f87816a3385c!2sWhitstable%2C+UK!5e0!3m2!1sen!2sru!4v1502281567756" height="1600" frameborder="0" style="border:0" allowfullscreen)

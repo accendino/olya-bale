@@ -1,0 +1,38 @@
+mixin cv(headingModificatorClass, headingName, infoHiddenORshowed, headingNameInfo, buttonHiddenORshowed, link, buttonClass, buttonValue)
+	<!-- Резюме -->
+	.row
+		<!-- Фото пользователя -->
+		.hidden-xs.col-sm-2.col-lg-3
+			+userPhoto('background-image: url(usercontent/img/photo-big.jpg)', 'none')
+		<!-- //Фото пользователя -->        
+
+		.col-sm-10.col-lg-9
+			<!-- Обо мне -->
+			+headingWithEdit(headingModificatorClass, headingName, infoHiddenORshowed, headingNameInfo, buttonHiddenORshowed, link, buttonClass, buttonValue)
+
+			.section__content
+				p
+					| Я веб разработчик из Казани. Мне 28 лет.
+				p
+					| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+			.section__content
+				p 
+					| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+				p 
+					| Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+			<!-- //Обо мне -->
+
+			<!-- Что я умею --> 
+			.heading.heading--2
+				| Что я умею
+			.section__content
+				p
+					| Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
+				p
+					| Также знаком и могу решать не сложные задачи на Backend.
+			.section__content
+				p
+					| Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+			<!-- //Что я умею -->
+
+	<!-- //Резюме -->

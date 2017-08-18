@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Работа</title>
+    <meta content="" name="author"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/><!-- build:vendorCss css/vendor.css -->
+    <link rel="stylesheet" href="bower/bootstrap-grid/dist/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="bower/open-sans-all/css/open-sans.min.css"/><!-- endbuild -->
+<!-- build:userCss css/user.css -->
+    <link rel="stylesheet" href="css/main.css"/><!-- endbuild -->
+<!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body class="big-transparent">
+    <div class="hidden-xs hidden-sm">
+      <div class="admin-pannel flex-direction-row">
+        <div class="flex-direction-row flex-start">
+          <div class="flex-direction-row showed admin-info-block"><a href="#">
+              <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a><i></i>
+            <div class="flex-direction-column">
+              <div class="info__element info__element--userNameAdmin">Ольга Бэйл
+              </div>
+              <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-direction-row hidden-md hidden-lg">
+            <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Страницы</a></div>
+            <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Админка</a></div>
+          </div>
+          <div class="admin-pannel__nav-left flex-direction-row"><a class="admin-pannel__link color-grey" href="blog-add.html"><i class="fa fa-book" aria-hidden="true"></i>Пост</a><a class="admin-pannel__link color-grey" href="work-add.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Работа</a><a class="admin-pannel__link color-grey" href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>Обо мне</a><a class="admin-pannel__link color-grey" href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Контакты</a><a class="admin-pannel__link color-grey" href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>Сообщения</a></div>
+        </div>
+        <div class="admin-pannel__nav-right flex-direction-row"><a class="admin-pannel__link color-grey" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a></div>
+      </div>
+    </div>
+    <div class="nav-small hidden-md hidden-lg"><!-- иконка навигации --><a class="fa fa-bars navigation-small__toggle" href="#"></a><!-- //иконка навигации -->
+      <div class="background-color-grey">
+        <div class="flex-direction-row showed user-info-block"><a href="#">
+            <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
+          <div class="flex-direction-column">
+            <div class="info__element info__element--userName color-white">Имя Фамилия
+            </div>
+            <div class="info__element info__element--userType text-align-center">Пользователь
+            </div>
+            <div class="flex-start"><a class="button--userInfo button">Профиль</a><a class="button--userInfo button">Выход</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-row showed admin-info-block"><a href="#">
+            <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a><i></i>
+          <div class="flex-direction-column">
+            <div class="info__element info__element--userNameAdmin">Ольга Бэйл
+            </div>
+            <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-row hidden-md hidden-lg">
+          <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Страницы</a></div>
+          <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Админка</a></div>
+        </div>
+        <div class="container">
+          <ul class="navigation-small">
+            <li><a class="navigation-small__link" href="index.html">Главная</a></li>
+            <li><a class="navigation-small__link" href="about.html">Обо мне</a></li>
+            <li><a class="navigation-small__link" href="works.html">Работы</a></li>
+            <li><a class="navigation-small__link" href="blog.html">Блог</a></li>
+            <li><a class="navigation-small__link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <div class="admin-pannel__nav-left flex-direction-column"><a class="admin-pannel__link color-white" href="blog-add.html"><i class="fa fa-book" aria-hidden="true"></i>Пост</a><a class="admin-pannel__link color-white" href="work-add.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Работа</a><a class="admin-pannel__link color-white" href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>Обо мне</a><a class="admin-pannel__link color-white" href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Контакты</a><a class="admin-pannel__link color-white" href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>Сообщения</a></div>
+          <div class="admin-pannel__nav-right"><a class="admin-pannel__link color-white" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a></div>
+          <ul class="navigation-small showed">
+            <li><a class="navigation-small__link-yellow" href="register.html">Регистрация</a></li>
+            <li><a class="navigation-small__link-yellow" href="login.html">Вход</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="work-single-bg">
+      <header class="header flex-direction-row">
+        <div class="header__left">
+          <div class="logo"><a class="logo__link" href="./index.html">
+              <div class="flex-direction-row"><i class="fa fa-paper-plane-o logo__icon"></i><span class="logo__title">Digital Lifestyle</span></div>
+              <p class="logo__tagline">Сайт IT специалиста</p></a></div>
+          <div class="visible-md visible-lg">
+            <ul class="hidden">
+              <li><a class="navigation-main__link" href="index.html">Главная</a></li>
+              <li><a class="navigation-main__link" href="about.html">Обо мне</a></li>
+              <li><a class="navigation-main__link" href="works.html">Работы</a></li>
+              <li><a class="navigation-main__link" href="blog.html">Блог</a></li>
+              <li><a class="navigation-main__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="visible-md visible-lg">
+            <div class="authenticate__links"><a class="hidden" href="register.html">Регистрация</a><a class="hidden" href="login.html">Вход</a></div>
+            <div class="flex-direction-row hidden user-info-block"><a href="#">
+                <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
+              <div class="flex-direction-column">
+                <div class="info__element info__element--userName color-white">Имя Фамилия
+                </div>
+                <div class="info__element info__element--userType text-align-center">Пользователь
+                </div>
+                <div class="flex-start"><a class="button--userInfo button">Профиль</a><a class="button--userInfo button">Выход</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container section">
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1">
+            <div class="heading-with-edit flex-direction-row">
+              <div class="flex-direction-row flex-start">
+                <div class="heading heading--black">Верстка и frontend Интернет магазина
+                </div>
+                <div class="font-size28 margin-left-5 hidden">none
+                </div>
+              </div>
+              <div class="showed"><a class="button--edit button" href="#">Редактировать</a>
+              </div>
+            </div>
+            <div class="info">
+              <p class="info__element color-grey">Ольга Бэйл</p>
+              <p class="info__element color-blue">Работа</p>
+              <p class="info__element color-greyLight">16 Марта 2017</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1"><img class="blog-photo" src="./img/works/work-00.jpg"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="section" id="padding-big">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1">
+            <div class="col-sm-5">
+              <div class="heading heading--black">Кратко о проекте</div>Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+              <div class="info__element--userName">Время работы над проектом: 6 недель</div>
+              <div class="info__element--userName">Страниц сверстано: 52 страницы</div>
+              <div class="info__element--userName">Бюджет проекта: до 60 000 рублей</div>
+              <div class="heading heading--black">Результат</div>Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+            </div>
+            <div class="col-sm-4 col-sm-push-1">
+              <div class="flex-direction-column">
+                <div class="heading heading--black">Технологии</div>
+                <div class="padding-medium">• HTML5, CSS3.</div>
+                <div class="padding-medium">• JavaScript, jQuery.</div>
+                <div class="padding-medium">• LESS, PUG, Gulp, npm, bower.</div>
+                <div class="heading heading--black">Ссылка на проект</div><a class="color-blue" href="#">http://magnum-store.ru</a>
+                <div class="heading heading--black">Ссылка на GitHub</div><a class="color-blue" href="#">https://github.com/pozitive/magnumstore/</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer><!-- footer -->	
+      <div class="footer flex-direction-column" id="footer">
+        <div class="container">
+          <div class="row"><!-- col -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="footer-small">
+                <p>© Ольга Бэйл</p>
+                <p>Создано с <i class="fa fa-heart" aria-hidden="true"></i> в <a href="http://WebCademy.ru">WebCademy.ru</a> в 2017 году</p>
+              </div>
+            </div><!-- colEnd -->
+<!-- col -->
+            <div class="col-xs-12 col-sm-2 col-md-3 col-md-push-1">
+              <ul class="navigation-footer">
+                <li><a class="navigation-footer__link" href="index.html">Главная</a></li>
+                <li><a class="navigation-footer__link" href="about.html">Обо мне</a></li>
+                <li><a class="navigation-footer__link" href="works.html">Работы</a></li>
+                <li><a class="navigation-footer__link" href="blog.html">Блог</a></li>
+                <li><a class="navigation-footer__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </div><!-- colEnd -->
+<!-- col -->
+            <div class="col-xs-12 col-sm-3 col-md-4">
+              <div class="social"><a class="fa fa-vk" href="https://vk.com/id2356431" target="blank" aria-hidden="true"></a><a class="fa fa-instagram" href="http://instagram.com/olya_bale" target="blank" aria-hidden="true"></a><a class="fa fa-facebook" href="https://www.facebook.com/olga.belousova.3348" target="blank" aria-hidden="true"></a><a class="fa fa-github" href="https://github.com/accendino" target="blank" aria-hidden="true"></a></div><!-- colEnd -->
+<!-- footerEnd -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!-- build:vendorJs js/vendor.js -->
+    <script src="bower/jquery/dist/jquery.min.js" defer="defer"></script><!-- endbuild -->
+<!-- build:userJs js/user.js -->
+    <script src="js/main.js" defer="defer"></script><!-- endbuild -->
+  </body>
+</html>

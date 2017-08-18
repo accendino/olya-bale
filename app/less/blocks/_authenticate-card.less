@@ -6,7 +6,6 @@
 	z-index: 77;
 	padding: 0 10px;
 	margin: auto;
-	width: 50%;
 	position: relative;
 	
 	@media (min-width: 500px) {
@@ -14,7 +13,7 @@
     }	
     @media (min-width: 650px) {
 	width: 30%;
-    }		
+    }	
 	@media (min-width: 768px) {
 	width: 30%;
     }
@@ -23,6 +22,7 @@
 	width: 22.5%;
     }
     @media (min-width: 1200px) {
+	width: 22.5%;
     }	
 
 .authenticate__name{
@@ -61,46 +61,19 @@
 		border: 2px solid;
 		&:hover{
 			background-color: @blueLight !important;
+			}
 		&:active{
 			color: @grey;
 			border-color: @grey !important;			
 	    } 
-			
-		}
 	}
 }
 
-.authenticate__input{
-	width: 87%;
-	background-color: #FFF;
-	color: #00599a;
-	font-weight: 500;
-	font-family: 'Open Sans';
-	font-size: 12px;
-	margin: 0 0 13px 0;
-	    padding: 5px;// -15px 0 15px !important;		
-	    border: none;
-	    -webkit-border-radius: 4px;
-	    border-radius: 4px;
-	    background-color: #FFF;
-
-	    &:hover, &:focus, &:active,{
-	    }
-
-	    @media (min-width: 768px) {
-	    	font-size: 14px;
-	    	margin: 0 0 12px 0;
-	    	padding: 9px;
-	    }
-	    @media (min-width: 992px) {
-			//font-size: 14px;
-			//margin: 0 0 12px 0;
-			//padding: 9px;
-		}
-		@media (min-width: 1200px) {
-			font-size: 16px;
-			margin: 0 0 15px 0;
-			padding: 11px;
-		}	
-	}
+.input{
 }
+
+.error{
+}
+
+}
+

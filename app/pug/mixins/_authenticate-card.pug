@@ -1,0 +1,11 @@
+mixin authenticateCard(text, errorText, errorDetails, placeholder1, placeholder2, link, buttonClass, buttonValue)
+	.authenticate__card.col-xs-10.col-sm-6.col-md-4
+		.authenticate__name
+			h3
+				= text
+		form(id="authenticate-form").authenticate__form
+			+authenticateError(errorText, errorDetails)
+			input(type="text", name='email', placeholder=placeholder1).input
+			input(type="text", name='password', placeholder=placeholder2).input
+			include ../blocks/_checkbox.pug
+			+button(link, buttonClass, buttonValue)

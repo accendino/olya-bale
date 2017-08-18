@@ -1,0 +1,46 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Профиль'
+	- var bodyClass = 'big'
+
+
+block content
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+	
+	.edit-block
+		.container.section(id='padding-big')
+			.row
+				.col-sm-10.col-sm-push-1.flex-direction-column
+
+					.heading.heading--black
+						| Редактировать профиль
+
+					.flex-direction-column
+						+dataEditForm('Имя', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'hidden')
+						+dataEditForm('Фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите фамилию..', 'hidden')
+						+dataEditForm('Email', 'text', 'name', 'border: 1px solid lightgrey', 'Введите email..', 'hidden')
+
+					div
+						.info__element.info__element--userName
+							| Изображение
+					p
+						| Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+					div
+						.flex-direction-row.flex-start
+							+button('#', 'button--userInfo', 'Выбрать файл')
+							.color-greyLight
+								= fileStatus
+					img(src='./img/blog/yosemite-national-park.jpg', width='25%').hidden
+
+					.flex-direction-column
+						+dataEditForm('Страна', 'text', 'name', 'border: 1px solid lightgrey', 'Введите страну..', 'hidden')
+						+dataEditForm('Город', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'hidden')
+
+					div
+						+buttonArrowLeft('#')
+						+buttonArrowRight('#')
+
+	footer
+		include ./blocks/_footer.pug

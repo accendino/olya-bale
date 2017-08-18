@@ -1,0 +1,17 @@
+mixin header(navClass, linkClass, regClass, logClass, userInfoClass, userPhotoLink, userPhotoClass, userName, userType, buttonClass, buttonValue1, buttonValue2)
+	header.header.flex-direction-row
+		.header__left
+			.logo
+				a(href="./index.html").logo__link
+					.flex-direction-row
+						i.fa.fa-paper-plane-o.logo__icon
+						span.logo__title
+							| Digital Lifestyle
+					p.logo__tagline
+						| Сайт IT специалиста
+			.visible-md.visible-lg
+				+navigation(navClass, linkClass)
+		.header__right
+			.visible-md.visible-lg
+				+authenticateLinks(regClass, logClass)
+				+userInfo(userInfoClass, userPhotoLink, userPhotoClass, userName, userType, buttonClass, buttonValue1, buttonValue2)

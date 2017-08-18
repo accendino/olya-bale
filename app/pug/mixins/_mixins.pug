@@ -1,0 +1,285 @@
+mixin previewCard1(img, title, link, buttonClass, buttonValue)
+	.col-xs-12.col-sm-4.col-md-4
+		article.preview__card
+			img(src= img).preview__img
+			h4.preview__title
+				= title
+			+button(link, buttonClass, buttonValue)
+
+mixin previewCard(hiddenXS, hiddenSM, paddingModificator, img, title, link, buttonClass, buttonValue)
+	.col-xs-12.col-sm-6(class= hiddenXS, class= hiddenSM)
+		article.preview__card(class= paddingModificator)
+			img(src= img).preview__img
+			h4.preview__title
+				= title
+			+button(link, buttonClass, buttonValue)
+
+
+mixin userPhoto(userPhotoLink, userPhotoClass)
+	a(href='#')
+		.user-photo(style=userPhotoLink, class=userPhotoClass)
+
+
+mixin userInfo(userInfoClass, userPhotoLink, userPhotoClass, userName, userType, buttonClass, buttonValue1, buttonValue2)
+	.flex-direction-row(class= userInfoClass).user-info-block
+		+userPhoto(userPhotoLink, userPhotoClass)
+		i
+		.flex-direction-column
+			.info__element.info__element--userName.color-white
+				= userName
+			.info__element.info__element--userType.text-align-center
+				= userType
+			.flex-start
+				+button(link, buttonClass, buttonValue1)
+				+button(link, buttonClass, buttonValue2)
+
+
+mixin adminInfo(adminInfoClass, userPhotoLink, userPhotoClass, adminName, link, buttonClass, buttonValue)
+	.flex-direction-row(class= adminInfoClass).admin-info-block
+		+userPhoto(userPhotoLink, userPhotoClass)
+		i
+		.flex-direction-column
+				.info__element.info__element--userNameAdmin
+					= adminName
+				.flex-start
+					+button(link, buttonClass, buttonValue)
+	.flex-direction-row.hidden-md.hidden-lg
+				.col-xs-6.admin-tab.text-align-center
+					a(href='register.html')
+						| Страницы
+				.col-xs-6.admin-tab.text-align-center
+					a(href='register.html')
+						| Админка
+
+
+
+mixin review111111111111111111111111111111(userPhotoLink, userPhotoClass, userName, date, text)
+	<!-- Отдельный комментарий -->
+	.review.flex-direction-row
+		.hidden-xs.col-sm-1
+			+userPhoto(userPhotoLink, userPhotoClass)
+		.col-sm-11
+			.section__content.section__content--comments
+				.info.info--fullWidth
+						ul
+							li.info__element.info__element--userName.color-grey
+								= userName
+							li.info__element.info__element--userDate.color-greyLight
+								i(aria-hidden="true").fa.fa-clock-o
+								= date
+				p
+					= text
+	<!-- //Отдельный комментарий -->
+
+mixin review(userPhotoLink, userPhotoClass, userName, date, text)
+	<!-- Отдельный комментарий -->
+	.review
+		.flex-direction-row.flex-start
+			div
+				+userPhoto(userPhotoLink, userPhotoClass)
+
+			div
+				.section__content.section__content--comments
+					.info
+						ul.info__list
+							li.info__element.info__element--userName.color-grey
+								= userName
+							li.info__element.info__element--userDate.color-greyLight
+								i(aria-hidden="true").fa.fa-clock-o
+								= date
+					p.hidden-xs.hidden-sm
+						= text
+
+		.section__content.section__content--extra
+			p.hidden-md.hidden-lg
+				= text
+	<!-- //Отдельный комментарий -->
+
+
+mixin reviewSmall(blogName, date, text)
+	<!-- Отдельный комментарий -->
+	.review.flex-direction-row
+		div
+			.section__content.section__content--comments-small
+				.info
+					ul.info__list-small
+						li.info__element.color-blue
+							= blogName
+						li.info__element.info__element--userDate.color-greyLight
+							i(aria-hidden="true").fa.fa-clock-o
+							= date
+				p
+					= text
+	<!-- //Отдельный комментарий -->
+
+mixin writeReview(userPhotoLink, userPhotoClass, userName, date, errorText, border, placeholder, buttonClass, submitValue)
+	<!-- Оставить комментарий -->
+	.review
+		.flex-direction-row.flex-start
+			div
+				+userPhoto(userPhotoLink, userPhotoClass)
+			div
+				.section__content.section__content--comments
+					.info
+						ul.info__list
+							li.info__element.info__element--userName.color-grey
+								= userName
+							li.info__element.info__element--userDate.color-greyLight
+								i(aria-hidden="true").fa.fa-clock-o
+								= date
+					.hidden-xs.hidden-sm.section__imput
+						+error(errorText)
+						+textarea(border, placeholder)
+						+submit(buttonClass, submitValue)
+
+		.hidden-md.hidden-lg.section__imput
+					+error(errorText)
+					+textarea(border, placeholder)
+					+submit(buttonClass, submitValue)
+
+	<!-- //Оставить комментарий -->
+
+
+
+mixin navigation(navClass, linkClass)
+	ul(class= navClass)
+		li
+			a(href='index.html', class= linkClass)
+				| Главная
+		li
+			a(href='about.html', class= linkClass)
+				| Обо мне
+		li
+			a(href='works.html', class= linkClass)
+				| Работы
+		li
+			a(href='blog.html', class= linkClass)
+				| Блог
+		li
+			a(href='contacts.html', class= linkClass)
+				| Контакты
+
+
+mixin authenticateLinks(regClass, logClass)
+	.authenticate__links
+		a(href='register.html', class=regClass)
+			| Регистрация
+		a(href='login.html', class=logClass)
+			| Вход
+
+mixin authenticateLinksSmall(hiddenORshowed)
+	ul.navigation-small(class= hiddenORshowed)
+		li
+			a(href='register.html').navigation-small__link-yellow
+				| Регистрация
+		li
+			a(href='login.html').navigation-small__link-yellow
+				| Вход
+
+
+mixin input(inputType, inputName, border, placeholder, inputClassModificator)
+	input(type= inputType, name= inputName, style= border, placeholder= placeholder, class= inputClassModificator).input
+
+mixin inputNamed(inputHeading, inputType, inputName, border, placeholder, inputClassModificator)
+	.info__element.info__element--userName
+		= inputHeading
+	+input(inputType, inputName, border, placeholder, inputClassModificator)
+
+
+
+
+mixin textarea(textareaType, textareaName, border, placeholder, textareaClassModificator)
+	textarea(type= textareaType, name= textareaName, style= border, placeholder= placeholder, class= textareaClassModificator).input
+
+mixin textareaNamed(textareaHeading, textareaType, textareaName, border, placeholder, textareaClassModificator)
+	div
+		.info__element.info__element--userName
+			= textareaHeading
+		+textarea(textareaType, textareaName, border, placeholder, textareaClassModificator)
+
+mixin headingWithEdit111111111111111111111111(headingModificatorClass, headingName, hiddenORshowed, link, buttonClass, buttonValue)
+	.flex-direction-row
+			.heading(class= headingModificatorClass)
+				= headingName
+			div(class= hiddenORshowed)
+				+button(link, buttonClass, buttonValue)
+
+mixin headingWithEdit2222222222222222222222222(headingName, hiddenORshowed, headingNameInfo, hiddenORshowed, link, buttonClass, buttonValue)
+	.flex-direction-row
+		.flex-direction-row.flex-start
+			.heading.heading--black
+				= headingName
+			.font-weight400
+				= headingNameInfo
+		div(class= hiddenORshowed)
+			+button(link, buttonClass, buttonValue)
+
+mixin headingWithEdit(headingModificatorClass, headingName, infoHiddenORshowed, headingNameInfo, buttonHiddenORshowed, link, buttonClass, buttonValue)
+	.heading-with-edit.flex-direction-row
+		.flex-direction-row.flex-start
+			.heading(class= headingModificatorClass)
+				= headingName
+			.font-size28.margin-left-5(class= infoHiddenORshowed)
+				= headingNameInfo
+		div(class= buttonHiddenORshowed)
+			+button(link, buttonClass, buttonValue)
+
+mixin technology1(tecnologyName)
+	.col-sm-1.flex-direction-row.flex-start
+		.flex-direction-column
+			+inputNamed(tecnologyName, 'text', 'name', 'border: 1px solid lightgrey', '50')
+	p.input-subscription-small
+		| %
+
+mixin technology(tecnologyName)
+	.col-sm-1.info__element.info__element--userName.color-white.text-align-center.padding-left-0
+		= tecnologyName
+		
+
+
+mixin dataEditFormSmall(inputHeading, inputType, inputName, border, placeholder, hiddenORshowed)
+	.col-sm-1.flex-direction-row.flex-start
+		.flex-direction-column
+			+inputNamed(inputHeading, inputType, inputName, border, placeholder)
+	p.input-subscription-small(class= hiddenORshowed)
+		| %
+
+mixin dataEditForm(inputHeading, inputType, inputName, border, placeholder, hiddenORshowed)
+	.col-sm-3.flex-direction-row.flex-start
+		.flex-direction-column
+			+inputNamed(inputHeading, inputType, inputName, border, placeholder)
+		p.input-subscription(class= hiddenORshowed)
+			| %
+
+mixin experience(reviewClass, period, binHiddenORshowed, position, content)
+	.flex-direction-column.padding-medium(class= reviewClass)
+		.info.flex-direction-row
+			ul
+				li.info__element.info__element--experiencePeriod.color-greyLight
+					= period
+			i(href='#', aria-hidden="true", class= binHiddenORshowed).fa.fa-trash-o.color-greyLight
+		.info__element.info__element--userName
+			= position
+		p
+			= content
+
+mixin message(date, name, email, text, fileName)
+	.review
+		.flex-direction-column
+			.info.flex-direction-row
+				ul.info__list-small
+					li.info__element.info__element--userMessageDate.color-greyLight
+						= date
+				i(href='#', aria-hidden="true").fa.fa-trash-o.color-greyLight
+			.flex-direction-row.flex-start
+				.info__element.info__element--userName
+					= name
+				a(href= '#').info__element.color-greyLight
+					= email
+			p.info__list-small.padding-0
+				= text
+			.flex-direction-row.flex-start
+				.info__element.color-grey
+					| Прикреепленные файлы:
+				a(href= '#').info__element.color-greyLight
+					= fileName					

@@ -1,0 +1,28 @@
+mixin editPublication(heading, inputHeading, inputType, inputName, border, placeholder, inputClassModificator, link, buttonClass, buttonValue, fileStatus, hiddenORshowed, textareaHeading, textareaType, textareaName, border, placeholder, textareaClassModificator, link, link)
+	.edit-block
+		.container.section(id='padding-big')
+			.row
+				.col-sm-10.col-sm-push-1.flex-direction-column
+
+					.heading.heading--black
+						= heading
+
+					+inputNamed(inputHeading, inputType, inputName, border, placeholder, inputClassModificator)
+
+					div
+						.info__element.info__element--userName
+							| Изображение
+					p
+						| Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+					div
+						.flex-direction-row.flex-start
+							+button(link, buttonClass, buttonValue)
+							.color-greyLight
+								= fileStatus
+					img(src='./img/blog/yosemite-national-park.jpg', width='25%', class= hiddenORshowed)
+
+					+textareaNamed(textareaHeading, textareaType, textareaName, border, placeholder, textareaClassModificator)
+
+					div
+						+buttonArrowLeft(link)
+						+buttonArrowRight(link)

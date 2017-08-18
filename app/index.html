@@ -17,24 +17,98 @@
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
-  <body class="big flex-direction-column">
-    <header class="header">
+  <body class="big">
+    <div class="nav-small hidden-md hidden-lg"><!-- иконка навигации --><a class="fa fa-bars navigation-small__toggle" href="#"></a><!-- //иконка навигации -->
+      <div class="background-color-grey">
+        <div class="flex-direction-row showed user-info-block"><a href="#">
+            <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
+          <div class="flex-direction-column">
+            <div class="info__element info__element--userName color-white">Имя Фамилия
+            </div>
+            <div class="info__element info__element--userType text-align-center">Пользователь
+            </div>
+            <div class="flex-start"><a class="button--userInfo button">Профиль</a><a class="button--userInfo button">Выход</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-row showed admin-info-block"><a href="#">
+            <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a><i></i>
+          <div class="flex-direction-column">
+            <div class="info__element info__element--userNameAdmin">Ольга Бэйл
+            </div>
+            <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-row hidden-md hidden-lg">
+          <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Страницы</a></div>
+          <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Админка</a></div>
+        </div>
+        <div class="container">
+          <ul class="navigation-small">
+            <li><a class="navigation-small__link" href="index.html">Главная</a></li>
+            <li><a class="navigation-small__link" href="about.html">Обо мне</a></li>
+            <li><a class="navigation-small__link" href="works.html">Работы</a></li>
+            <li><a class="navigation-small__link" href="blog.html">Блог</a></li>
+            <li><a class="navigation-small__link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <div class="admin-pannel__nav-left flex-direction-column"><a class="admin-pannel__link color-white" href="blog-add.html"><i class="fa fa-book" aria-hidden="true"></i>Пост</a><a class="admin-pannel__link color-white" href="work-add.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Работа</a><a class="admin-pannel__link color-white" href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>Обо мне</a><a class="admin-pannel__link color-white" href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Контакты</a><a class="admin-pannel__link color-white" href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>Сообщения</a></div>
+          <div class="admin-pannel__nav-right"><a class="admin-pannel__link color-white" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a></div>
+          <ul class="navigation-small showed">
+            <li><a class="navigation-small__link-yellow" href="register.html">Регистрация</a></li>
+            <li><a class="navigation-small__link-yellow" href="login.html">Вход</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <header class="header flex-direction-row">
       <div class="header__left">
-        <div class="logo"><a class="logo__link" href="./index.html"><i class="fa fa-paper-plane-o logo__icon"></i><span class="logo__title">Digital Lifestyle</span>
+        <div class="logo"><a class="logo__link" href="./index.html">
+            <div class="flex-direction-row"><i class="fa fa-paper-plane-o logo__icon"></i><span class="logo__title">Digital Lifestyle</span></div>
             <p class="logo__tagline">Сайт IT специалиста</p></a></div>
-        <nav class="navigation-main"><a class="navigation-main__link" href="index.html">Главная</a><a class="navigation-main__link" href="about.html">Обо мне</a><a class="navigation-main__link" href="works.html">Работы</a><a class="navigation-main__link" href="blog.html">Блог</a><a class="navigation-main__link" href="contacts.html">Контакты</a></nav>
+        <div class="visible-md visible-lg">
+          <ul class="navigation-main">
+            <li><a class="navigation-main__link" href="index.html">Главная</a></li>
+            <li><a class="navigation-main__link" href="about.html">Обо мне</a></li>
+            <li><a class="navigation-main__link" href="works.html">Работы</a></li>
+            <li><a class="navigation-main__link" href="blog.html">Блог</a></li>
+            <li><a class="navigation-main__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
       </div>
       <div class="header__right">
-        <div class="authenticate__links"><a class="showed" href="register.html">Регистрация</a><a class="showed" href="login.html">Вход</a></div>
+        <div class="visible-md visible-lg">
+          <div class="authenticate__links"><a class="showed" href="register.html">Регистрация</a><a class="showed" href="login.html">Вход</a></div>
+          <div class="flex-direction-row hidden user-info-block"><a href="#">
+              <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
+            <div class="flex-direction-column">
+              <div class="info__element info__element--userName color-white">Имя Фамилия
+              </div>
+              <div class="info__element info__element--userType text-align-center">Пользователь
+              </div>
+              <div class="flex-start"><a class="button--userInfo button">Профиль</a><a class="button--userInfo button">Выход</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </header><!-- Резюме -->	    
-    <div class="container section">
+    </header>
+    <div class="container section"><!-- Резюме -->
       <div class="row"><!-- Фото пользователя -->
-        <div class="hidden-xs col-sm-2 col-lg-3">
-          <div class="user-photo modificator-none" style="background-image: url(usercontent/img/photo-big.jpg);"></div>
-        </div><!-- //Фото пользователя -->	    
+        <div class="hidden-xs col-sm-2 col-lg-3"><a href="#">
+            <div class="user-photo none" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a>
+        </div><!-- //Фото пользователя -->        
         <div class="col-sm-10 col-lg-9"><!-- Обо мне -->
-          <div class="heading">Ольга Бэйл</div>
+          <div class="heading-with-edit flex-direction-row">
+            <div class="flex-direction-row flex-start">
+              <div class="heading none">Ольга Бэйл
+              </div>
+              <div class="font-size28 margin-left-5 hidden">none
+              </div>
+            </div>
+            <div class="hidden"><a class="button--edit button" href="#">Редактировать</a>
+            </div>
+          </div>
           <div class="section__content">
             <p>Я веб разработчик из Казани. Мне 28 лет.</p>
             <p>Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
@@ -45,7 +119,7 @@
             <p>
                Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
           </div><!-- //Обо мне -->
-<!-- Что я умею -->	
+<!-- Что я умею --> 
           <div class="heading heading--2">Что я умею</div>
           <div class="section__content">
             <p>Меня привлекет Frontend разработка, это не только моя работа, но и хобби.</p>
@@ -53,91 +127,97 @@
           </div>
           <div class="section__content">
             <p>Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p>
-          </div><!-- //Что я умею --><a class="button" href="usercontent/pdf/cv.pdf">Подробнее</a>
+          </div><!-- //Что я умею -->
+        </div>
+      </div><!-- //Резюме -->
+      <div class="row">
+        <div class="col-sm-9 col-sm-push-2 col-lg-9 col-lg-push-3"><a class="button--preview button" href="usercontent/pdf/cv.pdf">Подробнее</a>
         </div>
       </div>
     </div><!-- //Резюме -->
-    <div class="line"></div><!-- Новые работы -->
-    <div class="container preview__container">
-      <div class="row preview__row">
-        <div class="col-sm-6 col-md-4">
-          <h3 class="preview__name">Новые работы</h3>
+    <div class="line"></div>
+    <div class="section"><!-- Новые работы -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="heading heading--black">Новые <a href="works.html">работы</a></div>
+          </div>
         </div>
-      </div>
-      <div class="row preview__row">
-        <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/06-prev.jpg"/>
-            <h4 class="preview__title">Поездка в New York
-            </h4><a class="button" href="#">Смотреть кейс</a>
-          </article>
+        <div class="row preview__row flex-direction-row">
+          <div class="col-xs-12 col-sm-6 none none">
+            <article class="preview__card preview__card--workPicture"><img class="preview__img" src="img/works/small/00-prev.jpg"/>
+              <h4 class="preview__title">Верстка Landing Page
+              </h4><a class="button--preview button" href="#">Смотреть кейс</a>
+            </article>
+          </div>
+          <div class="col-xs-12 col-sm-6 hidden-xs none">
+            <article class="preview__card preview__card--workPicture"><img class="preview__img" src="img/works/small/00-prev.jpg"/>
+              <h4 class="preview__title">Верстка UI набора
+              </h4><a class="button--preview button" href="#">Смотреть кейс</a>
+            </article>
+          </div>
+          <div class="col-xs-12 col-sm-6 hidden-xs hidden-sm">
+            <article class="preview__card preview__card--workPicture"><img class="preview__img" src="img/works/small/00-prev.jpg"/>
+              <h4 class="preview__title">Верстка интернет магазина
+              </h4><a class="button--preview button" href="#">Смотреть кейс</a>
+            </article>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/02-prev.jpg"/>
-            <h4 class="preview__title">Что я делал в долине
-            </h4><a class="button" href="#">Смотреть кейс</a>
-          </article>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/03-prev.jpg"/>
-            <h4 class="preview__title">Как я ходил в поход
-            </h4><a class="button" href="#">Смотреть кейс</a>
-          </article>
-        </div>
-      </div>
-    </div><!-- //Новые работы -->
+      </div><!-- //Новые работы -->
 <!-- Новые записи в блоге -->
-    <div class="container preview__container" id="padding-big">
-      <div class="row preview__row">
-        <div class="col-sm-6 col-md-4">
-          <h3 class="preview__name">Новые записи в блоге</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="heading heading--black">Новые записи в <a href="blog.html">блоге</a></div>
+          </div>
         </div>
-      </div>
-      <div class="row preview__row">
-        <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/01-prev.jpg"/>
-            <h4 class="preview__title">Парк Йосемити
-            </h4><a class="button" href="#">Читать</a>
-          </article>
+        <div class="row preview__row flex-direction-row">
+          <div class="col-xs-12 col-sm-6 none none">
+            <article class="preview__card preview__card--blogPicture"><img class="preview__img" src="img/blog/01-prev.jpg"/>
+              <h4 class="preview__title">Поездка в New York пример длинного названия поста ...
+              </h4><a class="button--preview button" href="blog-single.html">Читать</a>
+            </article>
+          </div>
+          <div class="col-xs-12 col-sm-6 hidden-xs none">
+            <article class="preview__card preview__card--blogPicture"><img class="preview__img" src="img/blog/01-prev.jpg"/>
+              <h4 class="preview__title">Что я делал в долине
+              </h4><a class="button--preview button" href="blog-single.html">Читать</a>
+            </article>
+          </div>
+          <div class="col-xs-12 col-sm-6 hidden-xs hidden-sm">
+            <article class="preview__card preview__card--blogPicture"><img class="preview__img" src="img/blog/01-prev.jpg"/>
+              <h4 class="preview__title">Как я ходил в поход этим летом
+              </h4><a class="button--preview button" href="blog-single.html">Читать</a>
+            </article>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/02-prev.jpg"/>
-            <h4 class="preview__title">Что я делал в долине
-            </h4><a class="button" href="#">Читать</a>
-          </article>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <article class="preview__card"><img class="preview__img" src="img/blog/03-prev.jpg"/>
-            <h4 class="preview__title">Как я ходил в поход
-            </h4><a class="button" href="#">Читать</a>
-          </article>
-        </div>
-      </div>
-    </div><!-- //Новые записи в блоге -->
+      </div><!-- //Новые записи в блоге -->
+    </div>
     <footer><!-- footer -->	
-      <div class="footer" id="footer">
+      <div class="footer flex-direction-column" id="footer">
         <div class="container">
           <div class="row"><!-- col -->
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="footer-small">
                 <p>© Ольга Бэйл</p>
                 <p>Создано с <i class="fa fa-heart" aria-hidden="true"></i> в <a href="http://WebCademy.ru">WebCademy.ru</a> в 2017 году</p>
               </div>
             </div><!-- colEnd -->
 <!-- col -->
-            <div class="col-xs-12 col-sm-4">
-              <ul class="footer__nav">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">Обо мне</a></li>
-                <li><a href="works.html">Работы</a></li>
-                <li><a href="blog.html">Блог</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+            <div class="col-xs-12 col-sm-2 col-md-3 col-md-push-1">
+              <ul class="navigation-footer">
+                <li><a class="navigation-footer__link" href="index.html">Главная</a></li>
+                <li><a class="navigation-footer__link" href="about.html">Обо мне</a></li>
+                <li><a class="navigation-footer__link" href="works.html">Работы</a></li>
+                <li><a class="navigation-footer__link" href="blog.html">Блог</a></li>
+                <li><a class="navigation-footer__link" href="contacts.html">Контакты</a></li>
               </ul>
             </div><!-- colEnd -->
 <!-- col -->
-            <div class="col-xs-12 col-sm-4">
-              <div class="social"><a class="fa fa-vk" href="https://vk.com/id2356431" target="blank" aria-hidden="true"></a><a class="fa fa-instagram" href="http://instagram.com/olya_bale" target="blank" aria-hidden="true"></a><a class="fa fa-facebook" href="https://www.facebook.com/olga.belousova.3348" target="blank" aria-hidden="true"></a><a class="fa fa-github" href="https://github.com/accendino" target="blank" aria-hidden="true"></a></div>
-            </div><!-- colEnd -->
+            <div class="col-xs-12 col-sm-3 col-md-4">
+              <div class="social"><a class="fa fa-vk" href="https://vk.com/id2356431" target="blank" aria-hidden="true"></a><a class="fa fa-instagram" href="http://instagram.com/olya_bale" target="blank" aria-hidden="true"></a><a class="fa fa-facebook" href="https://www.facebook.com/olga.belousova.3348" target="blank" aria-hidden="true"></a><a class="fa fa-github" href="https://github.com/accendino" target="blank" aria-hidden="true"></a></div><!-- colEnd -->
 <!-- footerEnd -->
+            </div>
           </div>
         </div>
       </div>

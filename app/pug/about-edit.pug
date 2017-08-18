@@ -1,0 +1,40 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Обо мне'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+
+	.container.section(id='padding-big')
+			.row
+				.col-sm-10.col-sm-push-1.flex-direction-column
+					.heading.heading--black
+						| Редактировать - Обо мне
+					+inputNamed('Имя, фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя и фамилию..', 'none')
+					div
+						.info__element.info__element--userName
+							| Фотография
+					p
+						| Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+					div
+						.flex-direction-row.flex-start
+							+button('#', 'button--adminInfo', 'Выбрать файл')
+							.color-greyLight
+								| файл не выбран
+					img(src='./usercontent/img/photo-big.jpg', width='25%', class= hiddenORshowed)
+
+					+textareaNamed('Информация на главной', 'text', 'name', 'border: 1px solid lightgrey', 'Введите текст..', 'none')
+
+					include ./blocks/_my-technologies-edit.pug
+
+					include ./blocks/_my-experience-edit.pug
+
+	footer
+		include ./blocks/_footer.pug

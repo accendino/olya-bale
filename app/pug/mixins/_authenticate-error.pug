@@ -1,16 +1,21 @@
-mixin authenticateError(errorWarn, errorText)
-	.authenticate__error
+mixin error(errorText)
+	.error
+		p
+			=errorText
+
+mixin authenticateError(errorText, errorDetails)
+	.error
 		p
 			| Введите E-mail
-	.authenticate__error
+	.error
 		p
 			| Введите пароль
-	.authenticate__error(id="authenticate__error")
-		p
-			= errorWarn
-		.authenticate__info
+	.authenticate-error
+		p.error
+			= errorText
+		.error__info
 			p
-				=errorText
+				=errorDetails
 			p
 				| Или воспользуйтесь 
 				a(href='#')
