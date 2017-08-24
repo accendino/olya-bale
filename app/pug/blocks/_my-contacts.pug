@@ -1,42 +1,49 @@
-.container.section(id='padding-big')
+.container.section.edit-block
 	.row
 		.col-sm-6.flex-direction-column
 
 			.heading.heading--black
 				| Контакты
 
-			.flex-direction-column
-				.flex-direction-row.flex-start
-					.col-sm-4.info__element.info__element--userName
-						| Email
-					.info__element
-						a(href='#').color-blue
-							| ahendina@gmail.ru
-			.flex-direction-row.flex-start
-				.col-sm-4.info__element.info__element--userName
+			.flex-direction-row.flex-start.info__list-small.contacts-row
+				.col-sm-5.col-lg-4.info__element.info__element--userName
+					| Email
+				.info__element
+					a(href='mailto:achendina@gmail.com').color-blue
+						| ahendina@gmail.com
+
+			.flex-direction-row.flex-start.info__list-small.contacts-row
+				.col-sm-5.col-lg-4.info__element.info__element--userName
 					| Skype
 				.info__element
-					a(href='#').color-blue
+					a(href='skype:achendina6246?chat').color-blue
 						| achendina6246
 								
-			.flex-direction-row.flex-start
-				.col-sm-4.info__element.info__element--userName
+			.flex-direction-row.flex-start.info__list-small.contacts-row
+				.col-sm-5.col-lg-4.info__element.info__element--userName
 					| Социальные сети
 				.flex-direction-column
-					a(href='#').info__element.info__element--userName.color-blue
+					a(href='https://vk.com/id2356431', target="blank").info__element.info__element--userName.color-blue
 						| Профиль Вконтакте
-					a(href='#').info__element.info__element--userName.color-blue
+					a(href='https://www.facebook.com/olga.belousova.3348', target="blank").info__element.info__element--userName.color-blue
 						| Профиль Facebook
 
-			.flex-direction-row.flex-start
-				.col-sm-4.info__element.info__element--userName
+			.flex-direction-row.flex-start.info__list-small.contacts-row
+				.col-sm-5.col-lg-4.info__element.info__element--userName
 					| Телефон
 				.info__element
 					| +595-456-123
-			.flex-direction-row.flex-start
-				.col-sm-4.info__element.info__element--userName
+
+			.flex-direction-row.flex-start.info__list-small.contacts-row
+				.col-sm-5.col-lg-4.info__element.info__element--userName
+					| Адрес11111111111111111111111
+				.info__element
+					| Великобритания, Кент, г. Уитстейбл
+					
+			.flex-direction-row.flex-start.info__list-small.contacts-row
+				.col-sm-5.col-lg-4.info__element.info__element--userName
 					| Адрес
-				.col-sm-4.info__element
+				.info__element
 					| Великобритания, Кент, г. Уитстейбл
 
 
@@ -56,11 +63,13 @@
 					| Прикрепить файл
 			p
 				| jpg, png, pdf, doc, весом до 2Мб.
+		
+				
 			div
 				.flex-direction-row.flex-start
-					+button('#', 'button--submit', 'Выбрать файл')
-					.color-greyLight
+					+button('#', 'button--addFileRound', 'Выбрать файл')
+					.file-status.file-status--message.color-greyLight
 						| my-lovely-photo.jpg
-				+button('#', 'button--submit', 'Отправить')
+				+button('#', 'button--submit-small', 'Отправить')
 
-iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d159478.23930488707!2d1.043174!3d51.350715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d932b34535a97d%3A0xde21f87816a3385c!2sWhitstable%2C+UK!5e0!3m2!1sen!2sru!4v1502281567756" height="1600" frameborder="0" style="border:0" allowfullscreen)
+iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d159478.23930488707!2d1.043174!3d51.350715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d932b34535a97d%3A0xde21f87816a3385c!2sWhitstable%2C+UK!5e0!3m2!1sen!2sru!4v1502281567756" height="400" frameborder="0" style="border:0" allowfullscreen)

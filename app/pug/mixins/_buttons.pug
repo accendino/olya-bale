@@ -8,6 +8,21 @@ mixin buttonArrowRight(link)
 		| Вперед
 		i(aria-hidden="true").fa.fa-arrow-right
 
+
+
+mixin buttonArrowLeftWithEdit(link, text)
+	a(href= link).button.button--arrow-left-with-edit
+		i(aria-hidden="true").fa.fa-arrow-left
+		= text
+
+mixin buttonArrowRightWithEdit(link, text)
+	a(href= link).button.button--arrow-right-with-edit
+		= text
+		i(aria-hidden="true").fa.fa-arrow-right
+
+
+
+
 mixin button(link, buttonClass, buttonValue)
 	a(href= link, class= buttonClass).button
 		= buttonValue

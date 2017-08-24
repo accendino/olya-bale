@@ -11,7 +11,7 @@ block content
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-03.jpg)', 'user-photo--logedUser', 'Юрий Ключевский', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 	
-	.container.section(id='padding-big')
+	.container.section
 		.row
 			.col-sm-10.col-sm-push-1
 
@@ -21,7 +21,7 @@ block content
 
 				include ./blocks/_comments.pug
 
-				+writeReview('background-image: url(usercontent/img/users/user-photo-03.jpg)', 'user-photo--review', 'Юрий Ключевский', 'Сейчас', 'Комментарий не может быть пустым.', 'border: none','Присоединиться к обсуждению...', 'button--submit', 'Опубликовать')
+				+writeReview('background-image: url(usercontent/img/users/user-photo-03.jpg)', 'user-photo--review', 'Юрий Ключевский', 'Сейчас', 'Комментарий не может быть пустым.', 'border: none', 'Присоединиться к обсуждению...')
 				<!-- //Комментарии -->
 
 	footer

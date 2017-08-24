@@ -1,0 +1,65 @@
+mixin review(userPhotoLink, userPhotoClass, userName, date, text)
+	<!-- Отдельный комментарий -->
+	.review
+		.flex-direction-row.flex-start
+			div
+				+userPhoto(userPhotoLink, userPhotoClass)
+
+			div
+				.section__content.section__content--comments
+					.info
+						ul.info__list
+							li.info__element.info__element--userName.color-grey
+								= userName
+							li.info__element.info__element--userDate.color-greyLight
+								i(aria-hidden="true").fa.fa-clock-o
+								= date
+					p.hidden-xs.hidden-sm
+						= text
+
+		.section__content.section__content--extra
+			p.hidden-md.hidden-lg
+				= text
+	<!-- //Отдельный комментарий -->
+
+
+mixin reviewSmall(blogName, date, text)
+	<!-- Отдельный комментарий -->
+	.review.flex-direction-row
+		div
+			.section__content.section__content--comments-small
+				.info
+					ul.info__list-small
+						li.info__element.color-blue
+							= blogName
+						li.info__element.info__element--userDate.color-greyLight
+							i(aria-hidden="true").fa.fa-clock-o
+							= date
+				p
+					= text
+	<!-- //Отдельный комментарий -->
+
+mixin writeReview(userPhotoLink, userPhotoClass, userName, date, errorText, border, placeholder)
+	<!-- Оставить комментарий -->
+	.review.flex-direction-column
+		.flex-direction-row
+			+userPhoto(userPhotoLink, userPhotoClass)
+			.section__content.section__content--comments
+				.info
+					ul.info__list
+						li.info__element.info__element--userName.color-grey
+							= userName
+						li.info__element.info__element--userDate.color-greyLight
+							i(aria-hidden="true").fa.fa-clock-o
+							= date
+				.hidden-xs.hidden-sm.section__imput
+					+error(errorText)
+					+textarea(border, placeholder)
+					+submit('button--submit', 'Добавить')
+
+		.hidden-md.hidden-lg.section__imput
+			+error(errorText)
+			+textarea(border, placeholder)
+			+submit('button--submit', 'Добавить')
+
+	<!-- //Оставить комментарий -->

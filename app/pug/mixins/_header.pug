@@ -15,3 +15,16 @@ mixin header(navClass, linkClass, regClass, logClass, userInfoClass, userPhotoLi
 			.visible-md.visible-lg
 				+authenticateLinks(regClass, logClass)
 				+userInfo(userInfoClass, userPhotoLink, userPhotoClass, userName, userType, buttonClass, buttonValue1, buttonValue2)
+
+
+mixin headerSmall2222222(regClass, logClass)
+	header.header-small
+		.header__left
+			.logo
+				a(href="./index.html").logo__link
+					.flex-direction-row.flex-start
+						i.fa.fa-paper-plane-o.logo__icon
+						span.logo__title
+							| Супер Сайт
+		.header__right
+			+authenticateLinks(regClass, logClass)
