@@ -1,0 +1,12 @@
+mixin technology1(tecnologyName)
+	.col-sm-1.flex-direction-row.flex-start
+		.flex-direction-column
+			+inputNamed(tecnologyName, 'text', 'name', 'border: 1px solid lightgrey', '50')
+	p.input-subscription-small
+		| %
+
+mixin technology(tecnologyName)
+	.technology.text-align-center
+		.info__element.info__element--userName
+			p
+				= tecnologyName

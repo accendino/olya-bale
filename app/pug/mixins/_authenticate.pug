@@ -1,0 +1,15 @@
+mixin authenticateLinks(regClass, logClass)
+	.authenticate__links
+		a(href='register.html', class=regClass)
+			| Регистрация
+		a(href='login.html', class=logClass)
+			| Вход
+
+mixin authenticateLinksSmall(hiddenORshowed)
+	ul.navigation-small(class= hiddenORshowed)
+		li
+			a(href='register.html').navigation-small__link-yellow
+				| Регистрация
+		li
+			a(href='login.html').navigation-small__link-yellow
+				| Вход

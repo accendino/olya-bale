@@ -1,0 +1,11 @@
+mixin experience(reviewClass, period, binHiddenORshowed, position, content)
+	.flex-direction-column.padding-medium(class= reviewClass)
+		.info.flex-direction-row
+			ul
+				li.info__element.info__element--experiencePeriod.color-greyLight
+					= period
+			i(href='#', aria-hidden="true", class= binHiddenORshowed).fa.fa-trash-o.color-greyLight
+		.info__element.info__element--userName
+			= position
+		p
+			= content

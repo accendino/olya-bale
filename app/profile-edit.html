@@ -36,7 +36,7 @@
       <div class="header__right">
         <div class="visible-md visible-lg">
           <div class="authenticate__links"><a class="hidden" href="register.html">Регистрация</a><a class="hidden" href="login.html">Вход</a></div>
-          <div class="flex-direction-row showed user-info-block"><a href="#">
+          <div class="flex-direction-row showed user-info-block"><a href="current-bugs.html">
               <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
             <div class="flex-direction-column">
               <div class="info__element info__element--userName color-white">Имя Фамилия
@@ -50,13 +50,13 @@
         </div>
       </div>
     </header>
-    <div class="edit-block">
-      <div class="container section" id="padding-big">
-        <div class="row">
-          <div class="col-sm-10 col-sm-push-1 flex-direction-column">
-            <div class="heading heading--black">Редактировать профиль</div>
-            <div class="flex-direction-column">
-              <div class="col-sm-3 flex-direction-row flex-start">
+    <div class="container section edit-block">
+      <div class="row">
+        <div class="col-sm-10 col-sm-push-1 flex-direction-column">
+          <div class="heading heading--black">Редактировать профиль</div>
+          <div class="hidden-xs">
+            <div class="flex-direction-column move-left-15">
+              <div class="data-edit-form col-sm-6 col-md-3 flex-direction-row flex-start">
                 <div class="flex-direction-column">
                   <div class="info__element info__element--userName">Имя
                   </div>
@@ -64,7 +64,7 @@
                 </div>
                 <p class="input-subscription hidden">%</p>
               </div>
-              <div class="col-sm-3 flex-direction-row flex-start">
+              <div class="data-edit-form col-sm-6 col-md-3 flex-direction-row flex-start">
                 <div class="flex-direction-column">
                   <div class="info__element info__element--userName">Фамилия
                   </div>
@@ -72,7 +72,7 @@
                 </div>
                 <p class="input-subscription hidden">%</p>
               </div>
-              <div class="col-sm-3 flex-direction-row flex-start">
+              <div class="data-edit-form col-sm-6 col-md-3 flex-direction-row flex-start">
                 <div class="flex-direction-column">
                   <div class="info__element info__element--userName">Email
                   </div>
@@ -81,18 +81,36 @@
                 <p class="input-subscription hidden">%</p>
               </div>
             </div>
-            <div>
-              <div class="info__element info__element--userName">Изображение</div>
-            </div>
-            <p>Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.</p>
-            <div>
-              <div class="flex-direction-row flex-start"><a class="button--userInfo button" href="#">Выбрать файл</a>
-                <div class="color-greyLight">
-                </div>
-              </div>
-            </div><img class="hidden" src="./img/blog/yosemite-national-park.jpg" width="25%"/>
+          </div>
+          <div class="hidden-sm hidden-md hidden-lg">
             <div class="flex-direction-column">
-              <div class="col-sm-3 flex-direction-row flex-start">
+              <div class="info__element info__element--userName">Имя
+              </div>
+              <input class="none input" type="text" name="name" style="border: 1px solid lightgrey;" placeholder="Введите имя.."/>
+              <div class="info__element info__element--userName">Фамилия
+              </div>
+              <input class="none input" type="text" name="name" style="border: 1px solid lightgrey;" placeholder="Введите фамилию.."/>
+              <div class="info__element info__element--userName">Email
+              </div>
+              <input class="none input" type="text" name="name" style="border: 1px solid lightgrey;" placeholder="Введите email.."/>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 col-sm-push-1 flex-direction-column">
+          <div>
+            <div class="info__element info__element--userName">Изображение</div>
+          </div>
+          <p class="hidden-xs">Изображение jpg или png, рекомендуемая ширина 945px и более, высота от 400px и более, вес до 2Мб.</p>
+          <p class="hidden-sm hidden-md hidden-lg">jpg, png, ширина 945px и более, высота 400px и более, вес до 2Мб</p>
+          <div>
+            <div class="flex-direction-row flex-start"><a class="button--addFileRound button" href="#">Выбрать файл</a>
+              <div class="file-status file-status--message color-greyLight">файл не выбран</div>
+            </div>
+          </div>
+          <div><img class="hidden" src="./img/blog/yosemite-national-park.jpg" width="25%"/></div>
+          <div class="hidden-xs">
+            <div class="flex-direction-column move-left-15">
+              <div class="data-edit-form col-sm-6 col-md-3 flex-direction-row flex-start">
                 <div class="flex-direction-column">
                   <div class="info__element info__element--userName">Страна
                   </div>
@@ -100,7 +118,7 @@
                 </div>
                 <p class="input-subscription hidden">%</p>
               </div>
-              <div class="col-sm-3 flex-direction-row flex-start">
+              <div class="data-edit-form col-sm-6 col-md-3 flex-direction-row flex-start">
                 <div class="flex-direction-column">
                   <div class="info__element info__element--userName">Город
                   </div>
@@ -109,7 +127,25 @@
                 <p class="input-subscription hidden">%</p>
               </div>
             </div>
-            <div><a class="button button--arrow-left" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i>Назад</a><a class="button button--arrow-right" href="#">Вперед<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="hidden-sm hidden-md hidden-lg">
+            <div class="flex-direction-column">
+              <div class="info__element info__element--userName">Страна
+              </div>
+              <input class="none input" type="text" name="name" style="border: 1px solid lightgrey;" placeholder="Введите страну.."/>
+              <div class="info__element info__element--userName">Город
+              </div>
+              <input class="none input" type="text" name="name" style="border: 1px solid lightgrey;" placeholder="Введите город.."/>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 col-sm-push-1">
+          <div class="flex-direction-row flex-start padding-medium width-unset">
+            <div class="margin-right-per-small">
+              <input class="button--submit button" value="Сохранить" type="submit"/>
+            </div>
+            <div>
+              <input class="button--submit button" value="Отмена" type="submit"/>
             </div>
           </div>
         </div>

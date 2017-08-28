@@ -1,0 +1,20 @@
+mixin message(date, name, email, text, fileName)
+	.review.message
+		.flex-direction-column
+			.info.flex-direction-row
+				ul.info__list-small
+					li.info__element.info__element--userMessageDate.color-greyLight
+						= date
+				i(href='#', aria-hidden="true").fa.fa-trash-o.color-greyLight
+			.flex-direction-row.flex-start.info__list-small
+				.info__element.info__element--userName
+					= name
+				a(href= '#').info__element.color-greyLight
+					= email
+			p.padding-0
+				= text
+			.flex-direction-row.flex-start.info__list-small
+				.info__element.color-grey
+					| Прикрепленные файлы:
+				a(href= '#').info__element.color-greyLight
+					= fileName

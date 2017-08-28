@@ -1,6 +1,6 @@
 mixin editWork(heading, fileStatus, hiddenORshowed)
 	.edit-block
-		.container.section(id='padding-big')
+		.container.section
 			.row
 				.col-sm-10.col-sm-push-1.flex-direction-column
 
@@ -10,25 +10,38 @@ mixin editWork(heading, fileStatus, hiddenORshowed)
 					+inputNamed('Название', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'none')
 
 					div
-						.info__element.info__element--userName
+						.info__element.info__element--userName.margin-bottom-unset
 							| Изображение
-					p
-						| Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+
+					p.hidden-xs
+						| Изображение jpg или png, рекомендуемая ширина 945px и более, высота от 400px и более, вес до 2Мб.
+
+					p.hidden-sm.hidden-md.hidden-lg
+						| jpg, png, ширина 945px и более, высота 400px и более, вес до 2Мб
+
 					div
 						.flex-direction-row.flex-start
-							+button('#', 'button--userInfo', 'Выбрать файл')
-							.color-greyLight
+							+button('#', 'button--addFileRound', 'Выбрать файл')
+							.file-status.color-greyLight
 								= fileStatus
+
+
 					img(src='./img/blog/yosemite-national-park.jpg', width='25%', class= hiddenORshowed)
 
 					+textareaNamed('Содержание', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'none')
 					+textareaNamed('Содержание', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'none')
 					+textareaNamed('Содержание', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'none')
 
-					.flex-direction-row.flex-start
+					.flex-direction-row.flex-start.move-left-15.hidden-xs
 						+dataEditForm('Ссылка на проект', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'hidden')
 						+dataEditForm('Ссылка на GitHub', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'hidden')
 
-					div
-						+buttonArrowLeft('#')
-						+buttonArrowRight('#')
+					.hidden-sm.hidden-md.hidden-lg
+						+inputNamed('Ссылка на проект', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'none')
+						+inputNamed('Ссылка на GitHub', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'none')
+
+					.flex-direction-row.flex-start.padding-medium.width-unset
+						div.margin-right-per-small
+							+submit('button--submit', 'Сохранить')
+						div
+							+submit('button--submit', 'Отмена')

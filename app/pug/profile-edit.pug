@@ -9,38 +9,61 @@ block content
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 	
-	.edit-block
-		.container.section(id='padding-big')
-			.row
-				.col-sm-10.col-sm-push-1.flex-direction-column
+	.container.section.edit-block
+		.row
+			.col-sm-10.col-sm-push-1.flex-direction-column
 
-					.heading.heading--black
-						| Редактировать профиль
+				.heading.heading--black
+					| Редактировать профиль
 
-					.flex-direction-column
+
+				.hidden-xs
+					.flex-direction-column.move-left-15
 						+dataEditForm('Имя', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'hidden')
 						+dataEditForm('Фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите фамилию..', 'hidden')
 						+dataEditForm('Email', 'text', 'name', 'border: 1px solid lightgrey', 'Введите email..', 'hidden')
 
-					div
-						.info__element.info__element--userName
-							| Изображение
-					p
-						| Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
-					div
-						.flex-direction-row.flex-start
-							+button('#', 'button--userInfo', 'Выбрать файл')
-							.color-greyLight
-								= fileStatus
+				.hidden-sm.hidden-md.hidden-lg
+					.flex-direction-column
+						+inputNamed('Имя', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'none')
+						+inputNamed('Фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите фамилию..', 'none')
+						+inputNamed('Email', 'text', 'name', 'border: 1px solid lightgrey', 'Введите email..', 'none')
+
+			.col-sm-10.col-sm-push-1.flex-direction-column
+				div
+					.info__element.info__element--userName
+						| Изображение
+
+				p.hidden-xs
+					| Изображение jpg или png, рекомендуемая ширина 945px и более, высота от 400px и более, вес до 2Мб.
+
+				p.hidden-sm.hidden-md.hidden-lg
+					| jpg, png, ширина 945px и более, высота 400px и более, вес до 2Мб
+
+				div
+					.flex-direction-row.flex-start
+						+button('#', 'button--addFileRound', 'Выбрать файл')
+						.file-status.file-status--message.color-greyLight
+							| файл не выбран
+				div
 					img(src='./img/blog/yosemite-national-park.jpg', width='25%').hidden
 
-					.flex-direction-column
+				.hidden-xs
+					.flex-direction-column.move-left-15
 						+dataEditForm('Страна', 'text', 'name', 'border: 1px solid lightgrey', 'Введите страну..', 'hidden')
 						+dataEditForm('Город', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'hidden')
 
+				.hidden-sm.hidden-md.hidden-lg
+					.flex-direction-column
+						+inputNamed('Страна', 'text', 'name', 'border: 1px solid lightgrey', 'Введите страну..', 'none')
+						+inputNamed('Город', 'text', 'name', 'border: 1px solid lightgrey', 'Введите город..', 'none')
+
+			.col-sm-10.col-sm-push-1
+				.flex-direction-row.flex-start.padding-medium.width-unset
+					div.margin-right-per-small
+						+submit('button--submit', 'Сохранить')
 					div
-						+buttonArrowLeft('#')
-						+buttonArrowRight('#')
+						+submit('button--submit', 'Отмена')
 
 	footer
 		include ./blocks/_footer.pug

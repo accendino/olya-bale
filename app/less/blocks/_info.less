@@ -1,8 +1,5 @@
 .info{
 	width: 100%;
-	@media (min-width: 992px){
-	//width: 50%;
-	}
 	
 	ul{
 		margin: 0;
@@ -13,80 +10,94 @@
 	margin-top: 6px;
 	margin-left: 0;
 	margin-right: 0;
-    }
+	}
 }
 
 .profile-info{
-	//padding-left: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	p{
+		margin-bottom: 2px;
+		@media (min-width: 768px){
+		margin-bottom: 5px;	
+	    }
+	}
 }	
 
-.info__list, .info__list-small{
-    
-}
+.info__list--article ul li{
+	margin-right: 5px;
+	@media (min-width: 992px){
+		margin-right: 10px;
+		
+	}
+}	
 
 .info__list{
 	display: flex;
 	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	    @media (min-width: 992px){
-	     -webkit-flex-direction: row;
-	     -ms-flex-direction: row;
-	        flex-direction: row;
+		-ms-flex-direction: column;
+			flex-direction: column;
+		@media (min-width: 992px){
+		 -webkit-flex-direction: row;
+		 -ms-flex-direction: row;
+			flex-direction: row;
 	   }
 
 	   .info__element--userName{
-	   	padding-top: 4px;
-	   	@media (min-width: 992px){
-	   	    padding-top: 0px;			
-	    }
+		padding-top: 4px;
+		//margin-left: 0;
+		@media (min-width: 992px){
+			padding-top: 0px;			
+		}
 	}
 
 	   i.fa-clock-o{	    
-		    @media (min-width: 992px){
-			    margin-left: 9px;
-	        }
+			@media (min-width: 992px){
+				margin-left: 9px;
+			}
 	}
 }
 
 .info__list-small{
 	display: flex;
 	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	    @media (min-width: 768px){
-	     -webkit-flex-direction: row;
-	     -ms-flex-direction: row;
-	        flex-direction: row;
+		-ms-flex-direction: column;
+			flex-direction: column;
+		@media (min-width: 768px){
+		 -webkit-flex-direction: row;
+		 -ms-flex-direction: row;
+			flex-direction: row;
 	   }
 
 	.info__element--userDate{
-	   	padding: 0;
+		padding: 0;
 	}
 
 	i.fa-clock-o{
-	    margin-left: 0px;
+		margin-left: 0px;
 		margin-right: 5px;
 		@media (min-width: 768px){
 			margin-left: 9px;
-		    margin-right: 5px;
-	    }
+			margin-right: 5px;
+		}
 	}
+}
+
+.info__list-big{
+	@media (min-width: 992px){
+			display: flex;
+			-webkit-flex-direction: row;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+		}
 }
 
 .info__element{
 	display: inline-block;
 	text-align: left;
-	font-size: 14px;   //5px;
+	font-size: 14px;
 	font-weight: 600;
-	margin-left: 15px;
-} 
-
-.info__element--margin-left0{
-	//margin-left: 0 !important;
-}	
+}
 
 .info__element--userName{
 		font-size: 16px;  
@@ -98,14 +109,19 @@
 	font-size: 16px;  
 	font-weight: 900; 
 	color: @white;
-	margin-left: 0;
 	@media (min-width: 992px){
 		color: @black;
 	}	
 }
 
 .info__element--userDate{
-	margin-left: 0;
+	padding-top: 4px;
+	@media (min-width: 992px){
+		padding-top: 3px;
+	}
+}
+
+.info__element--experiencePeriod{
 	padding-top: 4px;
 	@media (min-width: 992px){
 		padding-top: 3px;
@@ -114,17 +130,12 @@
 
 .info__element--userMessageDate, .info__element--experiencePeriod{
 	margin-left: 0;
-	padding-top: 4px;
-	@media (min-width: 992px){
-		padding-top: 3px;
-	}
 }
 
 .info__element--experiencePeriod{
-	//margin-left: 0;
-	//padding-top: 4px;
+	
 	@media (min-width: 992px){
-		//padding-top: 3px;
+		
 	}
 }
 
@@ -132,12 +143,9 @@
 	color: @white;
 	font-weight: 400;
 	opacity: 0.5;
-	margin-top: 0;
-	margin-left: 0;
 	@media (min-width: 992px){
 		color: @bluePale;
+		margin-top: -3px;
+		margin-bottom: 7px;
 	}
-}
-
-.profile-info{
 }

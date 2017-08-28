@@ -1,0 +1,15 @@
+mixin previewCard1(img, title, link, buttonClass, buttonValue)
+	.col-xs-12.col-sm-4.col-md-4
+		article.preview__card
+			img(src= img).preview__img
+			h4.preview__title
+				= title
+			+button(link, buttonClass, buttonValue)
+
+mixin previewCard(hiddenXS, hiddenSM, paddingModificator, img, title, link, buttonClass, buttonValue)
+	.col-xs-12.col-sm-6(class= hiddenXS, class= hiddenSM)
+		article.preview__card(class= paddingModificator)
+			img(src= img).preview__img
+			h4.preview__title
+				= title
+			+button(link, buttonClass, buttonValue)

@@ -8,10 +8,11 @@ block variables
 block content
 
 	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 
-	.section
+	.section.edit-block
 		.container
 			.row
 				.col-sm-10.col-sm-push-1
@@ -20,8 +21,8 @@ block content
 		.container
 			.row
 				.col-sm-10.col-sm-push-1
-					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.', 'Avrora-platform.pdf')
-					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.', 'Avrora-platform.pdf')
+					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?)', 'Avrora-platform.pdf')
+					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта.', 'Avrora-platform.pdf')
 					+message('22 Августа 2017', 'Джон До', 'johndoe@gmail.com', 'Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.', 'Avrora-platform.pdf')
 
 	footer

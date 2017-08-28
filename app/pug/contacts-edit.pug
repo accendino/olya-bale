@@ -8,34 +8,78 @@ block variables
 block content
 
 	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 
-	.container.section(id='padding-big')
+	.container.section.edit-block
 		.heading.heading--black
 			| Редактировать данные
 
-		.flex-direction-row.flex-start.padding-medium
-			+dataEditForm('Имя', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'hidden')
-			+dataEditForm('Фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите фамилию..', 'hidden')
+		.row
 
-		.flex-direction-row.flex-start.padding-medium
-			+dataEditForm('Email', 'text', 'name', 'border: 1px solid lightgrey', 'Введите email..', 'hidden')
-			+dataEditForm('Skype', 'text', 'name', 'border: 1px solid lightgrey', 'Введите skype..', 'hidden')
+			.hidden-xs
+				.flex-direction-row.flex-start.padding-medium
+					+dataEditForm('Имя', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'hidden')
+					+dataEditForm('Фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите фамилию..', 'hidden')
+			.hidden-sm.hidden-md.hidden-lg
+				.flex-direction-column.col-sm-12
+					+inputNamed('Имячко', 'text', 'name', 'border: 1px solid lightgrey', 'Введите имя..', 'none')
+					+inputNamed('Фамилия', 'text', 'name', 'border: 1px solid lightgrey', 'Введите фамилию..', 'none')
 
-		.flex-direction-row.flex-start.padding-medium
-			+dataEditForm('GitHub', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
-			+dataEditForm('Вконтакте', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
-			+dataEditForm('Facebook', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
-			+dataEditForm('Instagram', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
 
-		.flex-direction-row.flex-start.padding-medium
-			+dataEditForm('Телефон', 'text', 'name', 'border: 1px solid lightgrey', 'Введите телефон..', 'hidden')
-			+dataEditForm('Адрес', 'text', 'name', 'border: 1px solid lightgrey', 'Введите адрес..', 'hidden')
+			.hidden-xs
+				.flex-direction-row.flex-start.padding-medium
+					+dataEditForm('Email', 'text', 'name', 'border: 1px solid lightgrey', 'Введите email..', 'hidden')
+					+dataEditForm('Skype', 'text', 'name', 'border: 1px solid lightgrey', 'Введите skype..', 'hidden')
+			.hidden-sm.hidden-md.hidden-lg
+				.flex-direction-column.col-sm-12
+					+inputNamed('Email', 'text', 'name', 'border: 1px solid lightgrey', 'Введите email..', 'none')
+					+inputNamed('Skype', 'text', 'name', 'border: 1px solid lightgrey', 'Введите skype..', 'none')
 
-		.flex-direction-row.flex-start
-			+submit('button--submit', 'Сохранить')
-			+submit('button--submit', 'Отмена')
+
+
+			.hidden-xs.hidden-sm
+				.flex-direction-row.flex-start.padding-medium
+					+dataEditForm('GitHub', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+					+dataEditForm('Вконтакте', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+					+dataEditForm('Facebook', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+					+dataEditForm('Instagram', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+
+			.hidden-xs.hidden-md.hidden-lg
+				.flex-direction-row.flex-start.padding-medium
+					+dataEditForm('GitHub', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+					+dataEditForm('Вконтакте', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+			.hidden-xs.hidden-md.hidden-lg
+				.flex-direction-row.flex-start.padding-medium
+					+dataEditForm('Facebook', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+					+dataEditForm('Instagram', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'hidden')
+
+			.hidden-sm.hidden-md.hidden-lg
+				.flex-direction-column.col-sm-12
+					+inputNamed('GitHub', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'none')
+					+inputNamed('Вконтакте', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'none')
+					+inputNamed('Facebook', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'none')
+					+inputNamed('Instagram', 'text', 'name', 'border: 1px solid lightgrey', 'Введите ссылку на профиль..', 'none')
+
+
+
+			.hidden-xs
+				.flex-direction-row.flex-start.padding-medium
+					+dataEditForm('Телефон', 'text', 'name', 'border: 1px solid lightgrey', 'Введите телефон..', 'hidden')
+					+dataEditForm('Адрес', 'text', 'name', 'border: 1px solid lightgrey', 'Введите адрес..', 'hidden')
+			.hidden-sm.hidden-md.hidden-lg
+				.flex-direction-column.col-sm-12
+					+inputNamed('Телефон', 'text', 'name', 'border: 1px solid lightgrey', 'Введите телефон..', 'none')
+					+inputNamed('Адрес', 'text', 'name', 'border: 1px solid lightgrey', 'Введите адрес..', 'none')
+
+		
+
+		.flex-direction-row.flex-start.padding-medium.width-unset
+			div.margin-right-per-small
+				+submit('button--submit', 'Сохранить')
+			div
+				+submit('button--submit', 'Отмена')
 
 	footer
 		include ./blocks/_footer.pug

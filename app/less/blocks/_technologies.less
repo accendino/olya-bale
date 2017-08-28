@@ -1,4 +1,5 @@
 .technologies{
+	background-color: @black;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	@media (min-width: 992px) {
@@ -16,6 +17,47 @@
 	}
 
 	p.color-white{
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+    }
+
+	p{
 	}
 }
+
+.technologies .info__element p{
+	color: @white;
+}
+
+.technologies__heading{
+	@media (min-width: 768px) {
+		padding-left: 0;
+		padding-right: 0;
+    }
+}
+
+.technologies__row{
+	padding-top: 25px;
+	padding-bottom: 25px;	
+	    @media (min-width: 992px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		}
+}
+
+.technology{
+	width: 50px;
+	margin-right: 20px;
+	    @media (min-width: 768px) {
+		width: 68px;
+	    margin-right: 40px;
+		}
+	    @media (min-width: 992px) {
+		width: 75px;
+	    margin-right: 50px;
+		}
+
+	.info__element{
+		text-align: center;
+	}
+} 

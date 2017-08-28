@@ -8,13 +8,15 @@ block variables
 block content
 
 	include ./blocks/_admin-pannel.pug
+	include ./blocks/_navPannel-smallScreen.pug
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 
 	.container
-		.flex-direction-row.flex-end
-			+button('#', 'button--edit', 'Редактировать')
-			+button('#', 'button--submit', 'Сообщения')
+		.row
+			.col-xs-6.col-xs-push-6.flex-direction-row.row-fixed.info__list-small
+				+button('#', 'button--edit', 'Редактировать')
+				+button('#', 'button--submit', 'Сообщения')
 
 	include ./blocks/_my-contacts.pug
 

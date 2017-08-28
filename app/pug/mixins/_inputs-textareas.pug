@@ -1,0 +1,19 @@
+mixin input(inputType, inputName, border, placeholder, inputClassModificator)
+	input(type= inputType, name= inputName, style= border, placeholder= placeholder, class= inputClassModificator).input
+
+mixin inputNamed(inputHeading, inputType, inputName, border, placeholder, inputClassModificator)
+	.info__element.info__element--userName
+		= inputHeading
+	+input(inputType, inputName, border, placeholder, inputClassModificator)
+
+
+
+
+mixin textarea(textareaType, textareaName, border, placeholder, textareaClassModificator)
+	textarea(type= textareaType, name= textareaName, style= border, placeholder= placeholder, class= textareaClassModificator).input
+
+mixin textareaNamed(textareaHeading, textareaType, textareaName, border, placeholder, textareaClassModificator)
+	div
+		.info__element.info__element--userName
+			= textareaHeading
+		+textarea(textareaType, textareaName, border, placeholder, textareaClassModificator)

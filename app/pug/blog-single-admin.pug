@@ -12,17 +12,22 @@ block content
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 	
-	.container.section(id='padding-big')
+	.container.section
 		.row
 			.col-sm-10.col-sm-push-1
 
-				+headingWithEdit('none', 'Национальный парк Йосемити', 'hidden', 'none', 'showed', 'blog-edit.html', 'button--edit', 'Редактировать')
+				.hidden-xs
+					+headingWithEdit('none', 'Национальный парк Йосемити', 'hidden', 'none', 'showed', 'blog-edit.html', 'button--edit', 'Редактировать')
+
+				.hidden-sm.hidden-md.hidden-lg
+					+headingWithEdit('none', 'Парк Йосемити', 'hidden', 'none', 'showed', 'blog-edit.html', 'button--edit', 'Редактировать')
+
 
 				include ./blocks/_article.pug
 
 				include ./blocks/_comments.pug
 
-				+writeReview('background-image: url(usercontent/img/photo-big.jpg)', 'user-photo--review', 'Ольга Бэйл', 'Сейчас', 'Комментарий не может быть пустым.', 'border: none','Присоединиться к обсуждению...', 'button--submit', 'Опубликовать')
+				+writeReview('background-image: url(usercontent/img/photo-big.jpg)', 'user-photo--review', 'Ольга Бэйл', 'Сейчас', 'Комментарий не может быть пустым.', 'border: none','Присоединиться к обсуждению...')
 				<!-- //Комментарии -->
 
 	footer

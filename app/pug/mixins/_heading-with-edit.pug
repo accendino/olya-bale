@@ -1,0 +1,12 @@
+mixin headingWithEdit(headingModificatorClass, headingName, infoHiddenORshowed, headingNameInfo, buttonHiddenORshowed, link, buttonClass, buttonValue)
+	.heading-with-edit.flex-direction-row
+		.flex-direction-row.flex-start
+			.heading(class= headingModificatorClass)
+				= headingName
+			.heading-name-info.hidden-xs(class= infoHiddenORshowed)
+				p
+					= headingNameInfo
+		div(class= buttonHiddenORshowed)
+			+button(link, buttonClass, buttonValue)
+	.hidden-sm.hidden-md.hidden-lg(class= infoHiddenORshowed).move-top-15.margin-bottom-30.color-greyLight
+				= headingNameInfo

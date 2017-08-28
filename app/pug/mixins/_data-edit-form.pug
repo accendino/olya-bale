@@ -1,0 +1,13 @@
+mixin dataEditFormSmall(inputHeading, inputType, inputName, border, placeholder, hiddenORshowed)
+	.data-edit-form-small.flex-direction-row.flex-start.padding-0
+		.flex-direction-column
+			+inputNamed(inputHeading, inputType, inputName, border, placeholder)
+		p.input-subscription-small(class= hiddenORshowed)
+			| %
+
+mixin dataEditForm(inputHeading, inputType, inputName, border, placeholder, hiddenORshowed)
+	.data-edit-form.col-sm-6.col-md-3.flex-direction-row.flex-start
+		.flex-direction-column
+			+inputNamed(inputHeading, inputType, inputName, border, placeholder)
+		p.input-subscription(class= hiddenORshowed)
+			| %
