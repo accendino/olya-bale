@@ -19,7 +19,37 @@ body.big{
 	width: 100%;	
 }
 
-body.big-transparent{    // see logo.less
+//=============================================
+
+body.big-transparent{
+	.logo__icon {
+		padding-top: 25px !important;	
+			@media (min-width: 768px) {
+				padding-top: 35px !important;
+			}
+	}
+
+	.logo__title {
+		margin-top: 20px !important;
+			@media (min-width: 768px) {
+				margin-top: 30px !important;
+				margin-bottom: 7px !important;
+			}
+	}
+
+	.logo__tagline{
+		@media (max-width: 767px) {
+		    margin-bottom: 40px;
+	    }
+	}
+
+	.blog-photo{
+		@media (max-width: 767px) {
+		    margin-bottom: 0;
+	    }
+	}
+
+	
 }
 
 body.small{	
