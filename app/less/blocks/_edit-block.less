@@ -94,7 +94,6 @@
 }
 
 .edit-block .button--submit{
-	//width: unset;
 }
 
 .file-status, .file-status--message{
@@ -138,20 +137,24 @@
 }
 
 .row-fixed{
+	overflow: hidden;
 	@media (max-width: 767px) { 
     }
 }
 
 .row-fixed .button--edit{
         margin-top: 25px;
+        //font-size: 16px;        
 }
 
 .row-fixed .button--submit{
+	font-size: 13px;
 	margin-left: 10px;
 	//margin-top: 32px;
     padding: 6px 8px 6px 8px;
                 
         @media (min-width: 768px) {
+	        font-size: 16px;
             //margin-top: 5px;         
             padding: 3px 15px 3px 15px;	                    
         }
@@ -163,6 +166,10 @@
             //padding-top: 10px;
             padding: 8px 20px 8px 20px;	                          
         }
+
+        &:active{	
+			background-color: @white;			
+		}
 }
 
 .row-fixed .button--edit, .row-fixed .button--submit{

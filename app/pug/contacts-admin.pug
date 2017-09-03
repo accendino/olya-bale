@@ -8,13 +8,13 @@ block variables
 block content
 
 	include ./blocks/_admin-pannel.pug
-	include ./blocks/_navPannel-smallScreen.pug
+	+navPannelSmallScreen('hidden', 'showed', 'hidden')
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 
 	.container
 		.row
-			.col-xs-6.col-xs-push-6.flex-direction-row.row-fixed.info__list-small
+			.col-xs-6.col-xs-push-6.col-md-push-5.flex-direction-row.row-fixed.info__list-small
 				+button('#', 'button--edit', 'Редактировать')
 				+button('#', 'button--submit', 'Сообщения')
 

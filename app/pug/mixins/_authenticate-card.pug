@@ -1,12 +1,41 @@
-mixin authenticateCard(text, errorText, errorDetails, placeholder1, placeholder2, link, buttonClass, buttonValue)
-	.col-sm-4.col-lg-3.margin-auto
+mixin authenticateCard(text, errorText, errorDetails, placeholder1, placeholder2, buttonClass, submitValue)
+	.col-xs-12.col-sm-4.col-lg-3.margin-auto
 		.authenticate__card
 			.authenticate__name
 				h3
 					= text
 			form(id="authenticate-form").authenticate__form
-				+authenticateError(errorText, errorDetails)
+				//-+authenticateError(errorText, errorDetails)
+
+				div(data-error-message="email").error-single
+					.error
+						p
+							| Введите E-mail
 				input(type="text", name='email', placeholder=placeholder1).input
-				input(type="text", name='password', placeholder=placeholder2).input
+				//--------------------------------------------------------------
+
+
+				div(data-error-message="password").error-single
+					.error
+						p
+							| Введите пароль
+				input(type="password", name='password', placeholder=placeholder2).input
+				//--------------------------------------------------------------
+
+				//-.error-single
+				//-	.authenticate-error
+				//-		p.error
+				//-			= errorText
+				//-	.error__info
+				//-		p
+				//-			=errorDetails
+				//-		p
+				//-			| Или воспользуйтесь 
+				//-			a(href='#')
+				//-				| восстановлением пароля
+				//-			|, чтобы войти на сайт.
+				//--------------------------------------------------------------
+
 				include ../blocks/_checkbox.pug
-				+button(link, buttonClass, buttonValue)
+				//- +button(link, buttonClass, buttonValue)
+				+submit(buttonClass, submitValue)

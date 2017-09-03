@@ -1,0 +1,18 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Профиль'
+	- var bodyClass = 'big'
+
+
+block content
+
+	include ./blocks/_admin-pannel.pug
+	+navPannelSmallScreen('hidden', 'showed', 'hidden')
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+	
+	+profileBlock('hidden')
+
+	footer
+		include ./blocks/_footer.pug

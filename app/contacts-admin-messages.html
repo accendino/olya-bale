@@ -21,28 +21,30 @@
     <div class="hidden-xs hidden-sm">
       <div class="admin-pannel flex-direction-row">
         <div class="flex-direction-row flex-start">
-          <div class="flex-direction-row showed admin-info-block"><a href="current-bugs.html">
-              <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a><i></i>
-            <div class="flex-direction-column">
-              <div class="info__element info__element--userNameAdmin">Ольга Бэйл
-              </div>
-              <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+          <div class="showed">
+            <div class="flex-direction-row admin-info-block">
+              <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+                  <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a></div><i></i>
+              <div class="flex-direction-column">
+                <div class="info__element info__element--userNameAdmin">Ольга Бэйл
+                </div>
+                <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex-direction-row hidden-md hidden-lg">
-            <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Страницы</a></div>
-            <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Админка</a></div>
+            <div class="flex-direction-row hidden-md hidden-lg"><a class="admin-tab col-xs-6 text-align-center" href="#" id="admin-nav-1">Страницы</a><a class="admin-tab col-xs-6 text-align-center" href="#" id="admin-nav-2">Админка</a></div>
           </div>
           <div class="admin-pannel__nav-left flex-direction-row"><a class="admin-pannel__link color-grey" href="blog-add.html"><i class="fa fa-book" aria-hidden="true"></i>Пост</a><a class="admin-pannel__link color-grey" href="work-add.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Работа</a><a class="admin-pannel__link color-grey" href="about-edit.html"><i class="fa fa-address-card-o" aria-hidden="true"></i>Обо мне</a><a class="admin-pannel__link color-grey" href="contacts-edit.html"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Контакты</a><a class="admin-pannel__link color-grey" href="contacts-admin-messages.html"><i class="fa fa-commenting-o" aria-hidden="true"></i>Сообщения</a></div>
         </div>
         <div class="admin-pannel__nav-right flex-direction-row"><a class="admin-pannel__link color-grey" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a></div>
       </div>
     </div>
-    <div class="nav-small hidden-md hidden-lg"><!-- иконка навигации --><a class="fa fa-bars navigation-small__toggle" href="#"></a><!-- //иконка навигации -->
-      <div class="background-color-grey">
-        <div class="flex-direction-row showed user-info-block"><a href="current-bugs.html">
-            <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
+    <div class="nav__pannel__small__screen hidden-md hidden-lg"><!-- bars - open navigation --><a class="fa fa-bars flex-direction-row flex-start" href="#" id="open__navigation__button">
+        <p>открыть навигацию</p></a><!-- //bars - open navigation -->
+      <div class="navigation__slide hidden" id="navigation__slide"><!-- cross - close navigation --><a class="fa fa-times" href="#" id="close__navigation__button"></a><!-- //cross - close navigation -->
+        <div class="flex-direction-row hidden user-info-block">
+          <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+              <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a></div><i></i>
           <div class="flex-direction-column">
             <div class="info__element info__element--userName color-white">Имя Фамилия
             </div>
@@ -52,30 +54,34 @@
             </div>
           </div>
         </div>
-        <div class="flex-direction-row showed admin-info-block"><a href="current-bugs.html">
-            <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a><i></i>
-          <div class="flex-direction-column">
-            <div class="info__element info__element--userNameAdmin">Ольга Бэйл
-            </div>
-            <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+        <div class="showed">
+          <div class="flex-direction-row admin-info-block">
+            <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+                <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a></div><i></i>
+            <div class="flex-direction-column">
+              <div class="info__element info__element--userNameAdmin">Ольга Бэйл
+              </div>
+              <div class="flex-start"><a class="button--adminInfo button" href="#">Администратор</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flex-direction-row hidden-md hidden-lg">
-          <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Страницы</a></div>
-          <div class="col-xs-6 admin-tab text-align-center"><a href="register.html">Админка</a></div>
+          <div class="flex-direction-row hidden-md hidden-lg"><a class="admin-tab col-xs-6 text-align-center" href="#" id="admin-nav-1">Страницы</a><a class="admin-tab col-xs-6 text-align-center" href="#" id="admin-nav-2">Админка</a></div>
         </div>
         <div class="container">
-          <ul class="navigation-small">
-            <li><a class="navigation-small__link" href="index.html">Главная</a></li>
-            <li><a class="navigation-small__link" href="about.html">Обо мне</a></li>
-            <li><a class="navigation-small__link" href="works.html">Работы</a></li>
-            <li><a class="navigation-small__link" href="blog.html">Блог</a></li>
-            <li><a class="navigation-small__link" href="contacts.html">Контакты</a></li>
-          </ul>
-          <div class="admin-pannel__nav-left flex-direction-column"><a class="admin-pannel__link color-white" href="blog-add.html"><i class="fa fa-book" aria-hidden="true"></i>Пост</a><a class="admin-pannel__link color-white" href="work-add.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Работа</a><a class="admin-pannel__link color-white" href="about-edit.html"><i class="fa fa-address-card-o" aria-hidden="true"></i>Обо мне</a><a class="admin-pannel__link color-white" href="contacts-edit.html"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Контакты</a><a class="admin-pannel__link color-white" href="contacts-admin-messages.html"><i class="fa fa-commenting-o" aria-hidden="true"></i>Сообщения</a></div>
-          <div class="admin-pannel__nav-right"><a class="admin-pannel__link color-white" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a></div>
-          <ul class="navigation-small showed">
+          <div class="admin-nav-single-block" id="admin-nav-block-1">
+            <ul class="navigation-small">
+              <li><a class="navigation-small__link" href="index.html">Главная</a></li>
+              <li><a class="navigation-small__link" href="about.html">Обо мне</a></li>
+              <li><a class="navigation-small__link" href="works.html">Работы</a></li>
+              <li><a class="navigation-small__link" href="blog.html">Блог</a></li>
+              <li><a class="navigation-small__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="admin-nav-single-block hidden" id="admin-nav-block-2">
+            <div class="admin-pannel__nav-left flex-direction-column"><a class="admin-pannel__link color-white" href="blog-add.html"><i class="fa fa-book" aria-hidden="true"></i>Пост</a><a class="admin-pannel__link color-white" href="work-add.html"><i class="fa fa-briefcase" aria-hidden="true"></i>Работа</a><a class="admin-pannel__link color-white" href="about-edit.html"><i class="fa fa-address-card-o" aria-hidden="true"></i>Обо мне</a><a class="admin-pannel__link color-white" href="contacts-edit.html"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Контакты</a><a class="admin-pannel__link color-white" href="contacts-admin-messages.html"><i class="fa fa-commenting-o" aria-hidden="true"></i>Сообщения</a></div>
+            <div class="admin-pannel__nav-right"><a class="admin-pannel__link color-white" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a></div>
+          </div>
+          <ul class="navigation-small hidden">
             <li><a class="navigation-small__link-yellow" href="register.html">Регистрация</a></li>
             <li><a class="navigation-small__link-yellow" href="login.html">Вход</a></li>
           </ul>
@@ -100,8 +106,9 @@
       <div class="header__right">
         <div class="visible-md visible-lg">
           <div class="authenticate__links"><a class="hidden" href="register.html">Регистрация</a><a class="hidden" href="login.html">Вход</a></div>
-          <div class="flex-direction-row hidden user-info-block"><a href="current-bugs.html">
-              <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a><i></i>
+          <div class="flex-direction-row hidden user-info-block">
+            <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+                <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a></div><i></i>
             <div class="flex-direction-column">
               <div class="info__element info__element--userName color-white">Имя Фамилия
               </div>

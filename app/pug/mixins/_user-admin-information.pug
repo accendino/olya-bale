@@ -1,10 +1,11 @@
 mixin userPhoto(userPhotoLink, userPhotoClass)
-	a(href='current-bugs.html')
-		.user-photo(style=userPhotoLink, class=userPhotoClass)
+	.width-unset
+		a(href='current-bugs.html').user-photo-link
+			.user-photo(style=userPhotoLink, class=userPhotoClass)
 
 
-mixin userInfo(userInfoClass, userPhotoLink, userPhotoClass, userName, userType, buttonClass, buttonValue1, buttonValue2)
-	.flex-direction-row(class= userInfoClass).user-info-block
+mixin userInfo(userHiddenOrShowed, userPhotoLink, userPhotoClass, userName, userType, buttonClass, buttonValue1, buttonValue2)
+	.flex-direction-row(class= userHiddenOrShowed).user-info-block
 		+userPhoto(userPhotoLink, userPhotoClass)
 		i
 		.flex-direction-column
@@ -17,19 +18,18 @@ mixin userInfo(userInfoClass, userPhotoLink, userPhotoClass, userName, userType,
 				+button(link, buttonClass, buttonValue2)
 
 
-mixin adminInfo(adminInfoClass, userPhotoLink, userPhotoClass, adminName, link, buttonClass, buttonValue)
-	.flex-direction-row(class= adminInfoClass).admin-info-block
-		+userPhoto(userPhotoLink, userPhotoClass)
-		i
-		.flex-direction-column
-				.info__element.info__element--userNameAdmin
-					= adminName
-				.flex-start
-					+button(link, buttonClass, buttonValue)
-	.flex-direction-row.hidden-md.hidden-lg
-				.col-xs-6.admin-tab.text-align-center
-					a(href='register.html')
-						| Страницы
-				.col-xs-6.admin-tab.text-align-center
-					a(href='register.html')
-						| Админка
+mixin adminInfo(adminHiddenOrShowed, userPhotoLink, userPhotoClass, adminName, link, buttonClass, buttonValue)
+	div(class= adminHiddenOrShowed)
+		.flex-direction-row.admin-info-block
+			+userPhoto(userPhotoLink, userPhotoClass)
+			i
+			.flex-direction-column
+					.info__element.info__element--userNameAdmin
+						= adminName
+					.flex-start
+						+button(link, buttonClass, buttonValue)
+		.flex-direction-row.hidden-md.hidden-lg
+			a(href="#", id= "admin-nav-1").admin-tab.col-xs-6.text-align-center
+				| Страницы
+			a(href="#", id= "admin-nav-2").admin-tab.col-xs-6.text-align-center
+				| Админка

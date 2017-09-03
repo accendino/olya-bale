@@ -39,9 +39,9 @@ mixin reviewSmall(blogName, date, text)
 					= text
 	<!-- //Отдельный комментарий -->
 
-mixin writeReview(userPhotoLink, userPhotoClass, userName, date, errorText, border, placeholder)
+mixin writeReview(userPhotoLink, userPhotoClass, userName, date)
 	<!-- Оставить комментарий -->
-	.review.flex-direction-column
+	form(id="writeReview").review.flex-direction-column
 		.flex-direction-row
 			+userPhoto(userPhotoLink, userPhotoClass)
 			.section__content.section__content--comments
@@ -53,13 +53,13 @@ mixin writeReview(userPhotoLink, userPhotoClass, userName, date, errorText, bord
 							i(aria-hidden="true").fa.fa-clock-o
 							= date
 				.hidden-xs.hidden-sm.section__imput
-					+error(errorText)
-					+textarea(border, placeholder)
+					+reviewError('Комментарий не может быть пустым.')
+					+textarea('text', 'name', 'border: 1px solid lightgrey', 'Присоединиться к обсуждению...', 'none')
 					+submit('button--submit', 'Добавить')
 
 		.hidden-md.hidden-lg.section__imput
-			+error(errorText)
-			+textarea(border, placeholder)
+			+reviewError('Комментарий не может быть пустым.')
+			+textarea('text', 'name', 'border: 1px solid lightgrey', 'Присоединиться к обсуждению...', 'none')
 			+submit('button--submit', 'Добавить')
 
 	<!-- //Оставить комментарий -->

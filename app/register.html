@@ -26,30 +26,25 @@
         <div class="authenticate__links"><a class="hidden" href="register.html">Регистрация</a><a class="showed" href="login.html">Вход</a></div>
       </div>
     </header>
-    <div class="col-sm-4 col-lg-3 margin-auto">
+    <div class="col-xs-12 col-sm-4 col-lg-3 margin-auto">
       <div class="authenticate__card">
         <div class="authenticate__name">
           <h3>Регистрация
           </h3>
         </div>
         <form class="authenticate__form" id="authenticate-form">
-          <div class="error">
-            <p>Введите E-mail</p>
-          </div>
-          <div class="error">
-            <p>Введите пароль</p>
-          </div>
-          <div class="authenticate-error">
-            <p class="error">Данный email уже занят
-            </p>
-            <div class="error__info">
-              <p>Используйте другой (!) email чтобы создать новый аккаунт.
-              </p>
-              <p>Или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.</p>
+          <div class="error-single" data-error-message="email">
+            <div class="error">
+              <p>Введите E-mail</p>
             </div>
           </div>
           <input class="input" type="text" name="email" placeholder="E-mail"/>
-          <input class="input" type="text" name="password" placeholder="Пароль"/>
+          <div class="error-single" data-error-message="password">
+            <div class="error">
+              <p>Введите пароль</p>
+            </div>
+          </div>
+          <input class="input" type="password" name="password" placeholder="Пароль"/>
           <div class="check-visible">
             <label class="flex-direction-row" id="checkbox">
               <div class="flex-direction-row">
@@ -60,7 +55,10 @@
               </div>
               <div><a href="#">Забыл пароль</a></div>
             </label>
-          </div><a class="button--authenticate button" href="#">Регистрация</a>
+          </div>
+          <div class="width-unset">
+            <input class="button--authenticate button" value="Регистрация" type="submit"/>
+          </div>
         </form>
       </div>
     </div>
