@@ -89,7 +89,7 @@ $(document).ready(function(){
 
 	//---------------------------------------------------------------------
 	// PLACEHOLDERS / get better!!! :)
-
+/*
 	$(emailField).on('focus', function(){
 		$(this).attr('placeholder', '');
 	});
@@ -111,6 +111,21 @@ $(document).ready(function(){
 	});
 	$('textarea').on('blur', function(){
 		$(this).attr('placeholder', 'Присоединиться к обсуждению...');
+	});
+
+*/
+
+
+	// Improved placeholders Handler
+	var placeHolderSave;
+	
+	$('input, textarea').on('focus', function(){
+		placeHolderSave = $(this).attr('placeholder');
+		$(this).attr('placeholder', '');
+	});
+
+	$('input, textarea').on('blur', function(){
+		$(this).attr('placeholder', placeHolderSave);
 	});
 
 	//---------------------------------------------------------------------
