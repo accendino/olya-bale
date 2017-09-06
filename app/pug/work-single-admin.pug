@@ -7,94 +7,10 @@ block variables
 
 block content
 
-	include ./blocks/_admin-pannel.pug
-	include ./blocks/_navPannel-smallScreen.pug
+	//-include ./blocks/_admin-pannel.pug
+	//-+navPannelSmallScreen('hidden', 'showed', 'hidden')
 
-	.work-single-bg
-		+header('hidden', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
-
-		.line.hidden-sm.hidden-md.hidden-lg
-		
-		.container.section
-			.row
-				.col-sm-10.col-sm-push-1
-					.hidden-xs
-						+headingWithEdit('heading--black', 'Верстка и frontend Интернет магазина', 'hidden', 'none', 'showed', 'work-edit.html', 'button--edit', 'Редактировать')
-					.hidden-sm.hidden-md.hidden-lg
-						+headingWithEdit('heading--black', 'Верстка и ', 'hidden', 'none', 'showed', 'work-edit.html', 'button--edit', 'Редактировать')
-						.heading.heading--black.move-top-10
-							| frontend Интернет магазина
-
-
-
-					.info.info__list-small.info__list--article
-						ul
-							li.info__element.color-grey
-								| Ольга Бэйл
-							li.info__element.color-blue
-								| Работа
-						ul
-							li.info__element.color-greyLight
-								| 16 Марта 2017
-
-			.row
-				.col-sm-10.col-sm-push-1
-					img(src='./img/works/work-00.jpg').blog-photo
-	.line
-
-	.section
-		.container
-			.row
-				.col-sm-10.col-sm-push-1
-
-					.col-sm-5
-						.heading.heading--work
-							| Кратко о проекте
-						.padding-small
-							| Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
-
-						.info__element--userName.padding-small
-							p
-								| Время работы над проектом: 6 недель
-						.info__element--userName.padding-small
-							p
-								| Страниц сверстано: 52 страницы
-						.info__element--userName.padding-small
-							p
-								| Бюджет проекта: до 60 000 рублей
-
-						.heading.heading--work
-							| Результат
-						.padding-big
-							| Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
-
-					.col-sm-4.col-sm-push-1
-						.flex-direction-column
-							.heading.heading--work
-								| Технологии
-							p.padding-small
-								| • HTML5, CSS3.
-							p.padding-small
-								| • JavaScript, jQuery.
-							p.padding-medium
-								| • LESS, PUG, Gulp, npm, bower.
-
-							.heading.heading--work
-								| Ссылка на проект
-							a(href='#').color-blue.margin-bottom-30
-								| http://magnum-store.ru
-
-							.heading.heading--work
-								| Ссылка на GitHub
-							a(href='#').color-blue.margin-bottom-30
-								| https://github.com/pozitive/magnumstore/
-
-
-			.row
-				.col-sm-10.col-sm-push-1
-					.flex-direction-row.padding-big.info__list-small
-						+buttonArrowLeftWithEdit('works.html', 'Все работы')
-						+buttonArrowRightWithEdit('#', 'Следующая работа')
-					
+	+workSingleBlock('showed')
+	
 	footer
 		include ./blocks/_footer.pug

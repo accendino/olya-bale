@@ -1,0 +1,17 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Профиль'
+	- var bodyClass = 'big'
+
+
+block content
+
+	+navPannelSmallScreen('hidden', 'hidden', 'showed')
+
+	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'showed', 'background-image: url(usercontent/img/users/small/user-photo-04.jpg)', 'user-photo--logedUser', 'Емельян Казаков', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+	
+	+profileBlock('showed')
+
+	footer
+		include ./blocks/_footer.pug

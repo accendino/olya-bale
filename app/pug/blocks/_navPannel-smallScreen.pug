@@ -1,40 +1,47 @@
-.nav-small.hidden-md.hidden-lg
-	<!-- иконка навигации -->
-	a(href='#').fa.fa-bars.navigation-small__toggle
-	<!-- //иконка навигации -->
+.navigation__small.hidden-md.hidden-lg
+	<!-- bars - open navigation -->
+	a(href='#', id='open__navigation__button').fa.fa-bars.flex-direction-row.flex-start
+		p
+			| открыть навигацию
+	<!-- //bars - open navigation -->
 
-	.background-color-grey
-		+userInfo('showed', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
-		+adminInfo('showed', 'background-image: url(usercontent/img/photo-big.jpg)', 'user-photo--admin', 'Ольга Бэйл', '#', 'button--adminInfo', 'Администратор')
+	.navigation__small__slide(id='navigation__small__slide').hidden
+		<!-- cross - close navigation -->
+		a(href='#', id='close__navigation__button').fa.fa-times
+		<!-- //cross - close navigation -->
+		+userInfo('hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
+		+adminInfo('hidden', 'background-image: url(usercontent/img/photo-big.jpg)', 'user-photo--admin', 'Ольга Бэйл', '#', 'button--adminInfo', 'Администратор')
 
 		.container
-			
-			+navigation('navigation-small', 'navigation-small__link')
 
-			.admin-pannel__nav-left.flex-direction-column
-				a(href="blog-add.html").admin-pannel__link.color-white
-					i(aria-hidden="true").fa.fa-book
-					| Пост
+			.admin-nav-single-block(id="admin-nav-block-1")
+				+navigation('navigation-small', 'navigation-small__link')
+
+			.admin-nav-single-block(id="admin-nav-block-2").hidden
+				.admin-pannel__nav-left.flex-direction-column
+					a(href="blog-add.html").admin-pannel__link.color-white
+						i(aria-hidden="true").fa.fa-book
+						| Пост
 					
-				a(href='work-add.html').admin-pannel__link.color-white
-					i(aria-hidden="true").fa.fa-briefcase
-					| Работа
+					a(href='work-add.html').admin-pannel__link.color-white
+						i(aria-hidden="true").fa.fa-briefcase
+						| Работа
 					
-				a(href='about-edit.html').admin-pannel__link.color-white
-					i(aria-hidden="true").fa.fa-address-card-o
-					| Обо мне
+					a(href='about-edit.html').admin-pannel__link.color-white
+						i(aria-hidden="true").fa.fa-address-card-o
+						| Обо мне
 					
-				a(href='contacts-edit.html').admin-pannel__link.color-white
-					i(aria-hidden="true").fa.fa-volume-control-phone
-					| Контакты
+					a(href='contacts-edit.html').admin-pannel__link.color-white
+						i(aria-hidden="true").fa.fa-volume-control-phone
+						| Контакты
 					
-				a(href='contacts-admin-messages.html').admin-pannel__link.color-white
-					i(aria-hidden="true").fa.fa-commenting-o
-					| Сообщения
+					a(href='contacts-admin-messages.html').admin-pannel__link.color-white
+						i(aria-hidden="true").fa.fa-commenting-o
+						| Сообщения
 					
-			.admin-pannel__nav-right
-				a(href='#').admin-pannel__link.color-white
-					i(aria-hidden="true").fa.fa-sign-out
-					| Выход
+				.admin-pannel__nav-right
+					a(href='#').admin-pannel__link.color-white
+						i(aria-hidden="true").fa.fa-sign-out
+						| Выход
 
 			+authenticateLinksSmall('showed')

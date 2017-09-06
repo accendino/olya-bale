@@ -19,7 +19,37 @@ body.big{
 	width: 100%;	
 }
 
-body.big-transparent{		
+//=============================================
+
+body.big-transparent{
+	.logo__icon {
+		padding-top: 25px !important;	
+			@media (min-width: 768px) {
+				padding-top: 35px !important;
+			}
+	}
+
+	.logo__title {
+		margin-top: 20px !important;
+			@media (min-width: 768px) {
+				margin-top: 30px !important;
+				margin-bottom: 7px !important;
+			}
+	}
+
+	.logo__tagline{
+		@media (max-width: 767px) {
+		    margin-bottom: 40px;
+	    }
+	}
+
+	.blog-photo{
+		@media (max-width: 767px) {
+		    margin-bottom: 0;
+	    }
+	}
+
+	
 }
 
 body.small{	
@@ -40,6 +70,10 @@ body.small{
 
 .hidden {
 	display: none !important;
+}
+
+.visible {
+	display: block !important;
 }
 
 //===================================================================
@@ -195,6 +229,12 @@ iframe{
 	padding-left: 0;
 }
 
+.padding-bottom-xs-15{
+	@media (max-width: 767px){    
+        padding-bottom: 20px !important;
+    }
+}
+
 //   *   *   *   *   *
 
 .margin-top-unset{
@@ -231,9 +271,20 @@ iframe{
 	margin-bottom: 10px;
 }
 
+.margin-bottom-25{
+	margin-bottom: 25px;
+}
+
 .margin-bottom-30{
 	margin-bottom: 30px;
 }
+
+.margin-bottom-xs-15{
+	@media (max-width: 767px){    
+        margin-bottom: 20px !important;
+    }
+}
+
 .margin-right-per-small{
 	margin-right: 1.5%;
 }
@@ -256,7 +307,7 @@ iframe{
 
 //WIDTH
 
-.width-unset, .width-unset .button{  
+.width-unset, .width-unset .button, .width-unset a{  
     width: unset !important;    
 }
 
@@ -308,6 +359,10 @@ iframe{
 
 .line{
 	border-top: 1px solid #eaeff5;
+}
+
+.text-decoration-line-through{
+	text-decoration:line-through;
 }
 
 //===================================================================

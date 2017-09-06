@@ -8,37 +8,11 @@ block variables
 block content
 
 	include ./blocks/_admin-pannel.pug
-	include ./blocks/_navPannel-smallScreen.pug
+	+navPannelSmallScreen('hidden', 'showed', 'hidden')
 
 	+header('navigation-main', 'navigation-main__link', 'hidden', 'hidden', 'hidden', 'background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--logedUser', 'Имя Фамилия', 'Пользователь', 'button--userInfo', 'Профиль', 'Выход')
 
-	.section
-		.container
-			.row
-				.col-xs-12
-					+headingWithEdit('heading--black', 'Работы', 'showed', 'которые сделал я и моя команда', 'hidden', 'blog-edit.html', 'button--edit', 'Редактировать')
-
-
-			<!-- Ряд с работами -->
-			.row.preview__row.flex-direction-row
-				+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/01-prev.jpg', 'Верстка Landing Page', 'work-single.html', 'button--preview', 'Смотреть кейс')
-				+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
-				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
-			<!-- //Ряд с работами -->
-
-			<!-- Ряд с работами -->
-			.row.preview__row.flex-direction-row
-				+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка Landing Page', '#', 'button--preview', 'Смотреть кейс')
-				+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
-				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
-			<!-- //Ряд с работами -->
-
-			<!-- Ряд с работами -->
-			.row.preview__row.flex-direction-row
-				+previewCard('none', 'none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка Landing Page', '#', 'button--preview', 'Смотреть кейс')
-				+previewCard('hidden-xs','none', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка UI набора', '#', 'button--preview', 'Смотреть кейс')
-				+previewCard('hidden-xs', 'hidden-sm', 'preview__card--workPicture', 'img/works/small/00-prev.jpg', 'Верстка интернет магазина', '#', 'button--preview', 'Смотреть кейс')
-			<!-- //Ряд с работами -->
+	include ./blocks/_works-block.pug
 	
 	footer
 		include ./blocks/_footer.pug

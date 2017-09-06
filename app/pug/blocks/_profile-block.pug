@@ -1,0 +1,34 @@
+mixin profileBlock(editButtonHiddenOrShowed)
+	.container.section
+		.row
+			.col-sm-10.col-sm-push-1
+				+headingWithEdit('heading--black', 'Профиль', 'hidden', 'none', editButtonHiddenOrShowed, '#', 'button--edit', 'Редактировать')
+		
+				.profile-info.flex-direction-row.flex-start
+					<!-- Фото пользователя -->
+					div
+						+userPhoto('background-image: url(usercontent/img/users/big/user-photo-04.jpg)', 'none')
+					<!-- //Фото пользователя -->
+
+					.col-xs-6
+						<!-- Информация пользователя -->
+						.info__element.info__element--userDate.color-greyLight
+							| Имя и фамилия
+						p
+							| Емельян Казаков
+						.info__element.info__element--userDate.color-greyLight
+							| Email
+						p
+							| pilat@mail.ru
+						.info__element.info__element--userDate.color-greyLight
+							| Страна, Город
+						p
+							| Россия, Казань
+						<!-- //Информация пользователя -->
+
+
+				.heading--user-comments
+					| Комментарии пользователя
+				+reviewSmall('Поездка в LA', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+				+reviewSmall('Ноутбук для веб-разработчика', '15 Мая 2017 года в 10:02', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+				+reviewSmall('Настройка Sublime', '12 Мая 2017 года в 20:39', 'Замечательный парк, обязательно отправлюсь туда этим летом.')

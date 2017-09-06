@@ -1,11 +1,25 @@
-.error, .error__info{
+.error-single{
 	display: none;
+	
+	@corner: 15px;  //12px;    
+    &:after{
+        content: "";
+        position: absolute;
+        left: 70px;  //17
+        margin-top: -15px;        
+        margin-left: -@corner;
+        border-top: @corner solid @red;
+        border-right: @corner solid transparent;
+        border-left: @corner solid transparent;                         
+    } 
+}
+
+.error-single:last-child{
+		margin-top: 7px;
 }
 
 .error{ 
-	//display: none !important;    
-
-	background-color: #c62828; //#ad1457;
+	background-color: @red;
 	color: #FFF;
 	font-weight: 500;
 	font-family: 'Open Sans';
@@ -30,6 +44,12 @@
 		@media (min-width: 1200px) {
 			margin: 0 0 15px 0;
 		} 
+}
+
+form#writeReview .error p{
+	@media (max-width: 767px) {
+		font-size: 12.5px;		
+	}
 }
 
 .error__info{

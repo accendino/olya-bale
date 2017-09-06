@@ -1,0 +1,31 @@
+mixin error(errorText)
+	.error
+		p
+			=errorText
+
+mixin reviewError(errorText)
+	.error.hidden
+		p
+			=errorText
+
+mixin authenticateError(errorText, errorDetails)
+	div(data-error-message="email").error-single
+		.error
+			p
+				| Введите E-mail
+	div(data-error-message="password").error-single
+		.error
+			p
+				| Введите пароль
+	.error-single
+		.authenticate-error
+			p.error
+				= errorText
+			.error__info
+				p
+					=errorDetails
+				p
+					| Или воспользуйтесь 
+					a(href='#')
+						| восстановлением пароля
+					|, чтобы войти на сайт.

@@ -28,4 +28,5 @@ mixin button(link, buttonClass, buttonValue)
 		= buttonValue
 
 mixin submit(buttonClass, submitValue)
-	input(class= buttonClass, value=submitValue, type="submit").button
+	.width-unset
+		input(class= buttonClass, value=submitValue, type="submit").button
