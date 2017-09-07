@@ -23,7 +23,7 @@
         <div class="flex-direction-row flex-start">
           <div class="showed">
             <div class="flex-direction-row admin-info-block">
-              <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+              <div class="width-unset"><a class="user-photo-link" href="to-do-list.html">
                   <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a></div><i></i>
               <div class="flex-direction-column">
                 <div class="info__element info__element--userNameAdmin">Ольга Бэйл
@@ -43,7 +43,7 @@
         <p>открыть навигацию</p></a><!-- //bars - open navigation -->
       <div class="navigation__slide hidden" id="navigation__slide"><!-- cross - close navigation --><a class="fa fa-times" href="#" id="close__navigation__button"></a><!-- //cross - close navigation -->
         <div class="flex-direction-row hidden user-info-block">
-          <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+          <div class="width-unset"><a class="user-photo-link" href="to-do-list.html">
               <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a></div><i></i>
           <div class="flex-direction-column">
             <div class="info__element info__element--userName color-white">Имя Фамилия
@@ -56,7 +56,7 @@
         </div>
         <div class="showed">
           <div class="flex-direction-row admin-info-block">
-            <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+            <div class="width-unset"><a class="user-photo-link" href="to-do-list.html">
                 <div class="user-photo user-photo--admin" style="background-image: url(usercontent/img/photo-big.jpg);"></div></a></div><i></i>
             <div class="flex-direction-column">
               <div class="info__element info__element--userNameAdmin">Ольга Бэйл
@@ -107,7 +107,7 @@
         <div class="visible-md visible-lg">
           <div class="authenticate__links"><a class="hidden" href="register.html">Регистрация</a><a class="hidden" href="login.html">Вход</a></div>
           <div class="flex-direction-row hidden user-info-block">
-            <div class="width-unset"><a class="user-photo-link" href="current-bugs.html">
+            <div class="width-unset"><a class="user-photo-link" href="to-do-list.html">
                 <div class="user-photo user-photo--logedUser" style="background-image: url(usercontent/img/users/user-photo-02.jpg);"></div></a></div><i></i>
             <div class="flex-direction-column">
               <div class="info__element info__element--userName color-white">Имя Фамилия
@@ -150,12 +150,8 @@
             <div class="info__element">+595-456-123</div>
           </div>
           <div class="flex-direction-row flex-start info__list-small contacts-row">
-            <div class="col-sm-5 col-lg-4 info__element info__element--userName">Адрес11111111111111111111111</div>
-            <div class="info__element">Великобритания, Кент, г. Уитстейбл</div>
-          </div>
-          <div class="flex-direction-row flex-start info__list-small contacts-row">
             <div class="col-sm-5 col-lg-4 info__element info__element--userName">Адрес</div>
-            <div class="info__element">Великобритания, Кент, г. Уитстейбл</div>
+            <div class="info__element">Великобритания,<br class="hidden-xs hidden-md hidden-lg"/> Кент, г. Уитстабл</div>
           </div>
         </div>
         <div class="col-sm-6 flex-direction-column">
@@ -175,7 +171,7 @@
         </div>
       </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d159478.23930488707!2d1.043174!3d51.350715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d932b34535a97d%3A0xde21f87816a3385c!2sWhitstable%2C+UK!5e0!3m2!1sen!2sru!4v1502281567756" height="400" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+    <div id="map"></div>
     <footer><!-- footer -->	
       <div class="footer flex-direction-column" id="footer">
         <div class="container">
@@ -207,6 +203,8 @@
     </footer><!-- build:vendorJs js/vendor.js -->
     <script src="bower/jquery/dist/jquery.min.js" defer="defer"></script><!-- endbuild -->
 <!-- build:userJs js/user.js -->
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0BGf7pNgjgqGorY1s35QHah705ZFYhPE&amp;callback=initMap"></script>
+    <script src="js/map.js" type="text/javascript" defer="defer"></script>
     <script src="js/main.js" defer="defer"></script><!-- endbuild -->
   </body>
 </html>

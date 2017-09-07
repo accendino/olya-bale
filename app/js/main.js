@@ -112,11 +112,10 @@ $(document).ready(function(){
 	$('textarea').on('blur', function(){
 		$(this).attr('placeholder', 'Присоединиться к обсуждению...');
 	});
-
 */
 
-
-	// Improved placeholders Handler
+    
+    // Improved placeholders Handler
 	var placeHolderSave;
 	
 	$('input, textarea').on('focus', function(){
@@ -127,7 +126,7 @@ $(document).ready(function(){
 	$('input, textarea').on('blur', function(){
 		$(this).attr('placeholder', placeHolderSave);
 	});
-
+	
 	//---------------------------------------------------------------------
 	// ADMIN PANNEL SMALL SCREEN -- ADMIN TABS
 

@@ -33,19 +33,14 @@
 					| Телефон
 				.info__element
 					| +595-456-123
-
-			.flex-direction-row.flex-start.info__list-small.contacts-row
-				.col-sm-5.col-lg-4.info__element.info__element--userName
-					| Адрес11111111111111111111111
-				.info__element
-					| Великобритания, Кент, г. Уитстейбл
 					
 			.flex-direction-row.flex-start.info__list-small.contacts-row
 				.col-sm-5.col-lg-4.info__element.info__element--userName
 					| Адрес
 				.info__element
-					| Великобритания, Кент, г. Уитстейбл
-
+					| Великобритания,
+					br.hidden-xs.hidden-md.hidden-lg
+					|  Кент, г. Уитстабл
 
 
 		.col-sm-6.flex-direction-column
@@ -72,4 +67,5 @@
 						| my-lovely-photo.jpg
 				+button('#', 'button--submit-small', 'Отправить')
 
-iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d159478.23930488707!2d1.043174!3d51.350715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d932b34535a97d%3A0xde21f87816a3385c!2sWhitstable%2C+UK!5e0!3m2!1sen!2sru!4v1502281567756" height="400" frameborder="0" style="border:0" allowfullscreen)
+div(id="map")
+
