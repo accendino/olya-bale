@@ -7,7 +7,7 @@ mixin authenticateCard(text, errorText, errorDetails, placeholder1, placeholder2
 			form(id="authenticate-form").authenticate__form
 				//-+authenticateError(errorText, errorDetails)
 
-				div(data-error-message="email").error-single
+				div(data-error-message="email").error-single.hidden
 					.error
 						p
 							| Введите E-mail
@@ -15,7 +15,7 @@ mixin authenticateCard(text, errorText, errorDetails, placeholder1, placeholder2
 				//--------------------------------------------------------------
 
 
-				div(data-error-message="password").error-single
+				div(data-error-message="password").error-single.hidden
 					.error
 						p
 							| Введите пароль
