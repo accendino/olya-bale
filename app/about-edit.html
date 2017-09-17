@@ -134,9 +134,8 @@
           <p class="hidden-xs">Изображение jpg или png, рекомендуемая ширина 945px и более, высота от 400px и более, вес до 2Мб.</p>
           <p class="hidden-sm hidden-md hidden-lg">jpg, png, ширина 945px и более, высота 400px и более, вес до 2Мб</p>
           <div>
-            <div class="flex-direction-row flex-start"><a class="button--addFileRound button" href="#">Выбрать файл</a>
-              <div class="file-status file-status--message color-greyLight">файл не выбран</div>
-            </div>
+            <input class="inputfile" name="inputfile" id="inputfile" value="" type="file" data-multiple-caption="{count} файлов выбрано" multiple="multiple"/>
+            <label class="button--addFileRound button" for="inputfile">Выбрать файл</label><span class="file-status color-greyLight">файл не выбран</span>
           </div>
           <div><img class="user-photo" src="./usercontent/img/photo-big.jpg"/></div>
           <div>
@@ -399,6 +398,7 @@
 <!-- build:userJs js/user.js -->
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0BGf7pNgjgqGorY1s35QHah705ZFYhPE&amp;callback=initMap"></script>
     <script src="js/map.js" type="text/javascript" defer="defer"></script>
+    <script src="js/custom-file-input.js"></script>
     <script src="js/main.js" defer="defer"></script><!-- endbuild -->
   </body>
 </html>

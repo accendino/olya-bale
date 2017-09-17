@@ -1,17 +1,17 @@
-var map;
 // Функция initMap которая отрисует карту на странице
 function initMap() {
+    var map;
 
     // Запишем сразу координаты в переменную
     var coordinates = {lat: 51.3607, lng: 1.0257};
 
     // Определяем клиент, чтобы после отключить перетаскивание карты на смартфонах.  Часть 1.
-    //var isDraggable;
-    //if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    //    isDraggable = false;
-    //} else {
-    //    isDraggable = true;
-    //}
+    var isDraggable;
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isDraggable = false;
+    } else {
+        isDraggable = true;
+    }
 
     // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
     map = new google.maps.Map(document.getElementById('map'), {
@@ -34,9 +34,9 @@ function initMap() {
         scrollwheel: false,
 
         // Отключить перетаскивание для смартфонов. Часть 2.
-        //draggable: isDraggable,
+        draggable: isDraggable
         //либо
-        draggable: false
+        //draggable: false
 
     });
 
@@ -56,7 +56,7 @@ function initMap() {
     icon: '../img/marker-grey.png',
 
     //Анимация маркера
-    animation: google.maps.Animation.BOUNCE
+    //animation: google.maps.Animation.BOUNCE
 
 
     });
@@ -96,4 +96,3 @@ function initMap() {
 
 
 }
-

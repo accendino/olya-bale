@@ -28,11 +28,9 @@ block content
 					p.hidden-sm.hidden-md.hidden-lg
 						| jpg, png, ширина 945px и более, высота 400px и более, вес до 2Мб
 
-					div
-						.flex-direction-row.flex-start
-							+button('#', 'button--addFileRound', 'Выбрать файл')
-							.file-status.file-status--message.color-greyLight
-								| файл не выбран
+
+					+addFile('button--addFileRound')
+
 
 					div
 						img(src='./usercontent/img/photo-big.jpg').user-photo

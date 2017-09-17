@@ -3,6 +3,7 @@ $(document).ready(function(){
 
 	// 1. SUBMIT ACTION: show and hide ERRORS
 	var submitAction = function(submitObject, field, error) {
+	    var requiredClass = 'hidden';
 
 		// 1.1 FIELD CHECK, SHOW ERROR IF EMPTY
 	    $(submitObject).on("submit", function(e){
@@ -13,7 +14,7 @@ $(document).ready(function(){
 		    var isValid = false;
 		    if ( fieldValue == "" ){
 			    isValid = false;
-			    $(error).removeClass('hidden');
+			    $(error).removeClass(requiredClass);
 		    } else {
 			    isValid = true;
 		    }
@@ -21,26 +22,26 @@ $(document).ready(function(){
 
 	    // 1.2 HIDE ERROR ON KEYUP
 	    $(field).on("keyup", function() {
- 		    $(error).addClass('hidden');
+ 		    $(error).addClass(requiredClass);
 	    });
     
     };
 
 
     //CALL FUNCTION FOR E-MAIL FIELD
-    submitAction($("form[id = 'authenticate-form']"), 
+    submitAction($("#authenticate-form"), 
         	     $("input[name ='email']"), 
-        	     $("form[id = 'authenticate-form'] div[data-error-message='email']"));
+        	     $("#authenticate-form div[data-error-message='email']"));
     
     //CALL FUNCTION FOR PASSWORD FIELD
-    submitAction($("form[id = 'authenticate-form']"), 
+    submitAction($("#authenticate-form"), 
         	     $("input[name ='password']"), 
-        	     $("form[id = 'authenticate-form'] div[data-error-message='password']"));
+        	     $("#authenticate-form div[data-error-message='password']"));
 
     //CALL FUNCTION FOR REVIEW FIELD
-    submitAction($("form[id = 'writeReview']"), 
-        	     $("form[id = 'writeReview'] textarea"), 
-        	     $("form[id = 'writeReview'] .error"));
+    submitAction($("#writeReview"), 
+        	     $("#writeReview textarea"), 
+        	     $("#writeReview .error"));
 
 
 	//--------------------------------------------------------------------- 
@@ -83,18 +84,22 @@ $(document).ready(function(){
 
 	    // NAVIGATION SMALL SCREEN -- NAVIGATION MAIN BUTTONS
 
-	    var buttonForOpen = $(".fa-bars[id='open__navigation__button']");
-	    var buttonForClose = $(".fa-times[id='close__navigation__button']");
+	    var buttonForOpen = $("#open__navigation__button");
+	    var buttonForClose = $("#close__navigation__button");
 
-	    var navigationSmallSlide = $(".navigation__slide[id='navigation__slide']");
+	    var navigationSmallSlide = $("#navigation__slide");
 
 	    // ADMIN PANNEL SMALL SCREEN -- ADMIN TABS
+
+	    //var adminNavOne = $('#admin-nav-1');
+	    //var adminNavTwo = $('#admin-nav-1');
+
 
 	    var adminNavOne = $(".admin-tab[id='admin-nav-1']");
 	    var adminNavTwo = $(".admin-tab[id='admin-nav-2']");
 
-	    var adminNavBlockOne = $(".admin-nav-single-block[id='admin-nav-block-1']");
-	    var adminNavBlockTwo = $(".admin-nav-single-block[id='admin-nav-block-2']");
+	    var adminNavBlockOne = $("#admin-nav-block-1");
+	    var adminNavBlockTwo = $("#admin-nav-block-2");
 
 
 		var navigationSmallScreen = {
@@ -142,7 +147,7 @@ $(document).ready(function(){
 
 		navigationSmallScreen.init();
 
-	}());	
+	}());
 
 
 });

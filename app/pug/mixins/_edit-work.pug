@@ -19,12 +19,7 @@ mixin editWork(heading, fileStatus, hiddenORshowed)
 					p.hidden-sm.hidden-md.hidden-lg
 						| jpg, png, ширина 945px и более, высота 400px и более, вес до 2Мб
 
-					div
-						.flex-direction-row.flex-start
-							+button('#', 'button--addFileRound', 'Выбрать файл')
-							.file-status.color-greyLight
-								= fileStatus
-
+					+addFile('button--addFileRound')
 
 					img(src='./img/blog/yosemite-national-park.jpg', width='25%', class= hiddenORshowed)
 

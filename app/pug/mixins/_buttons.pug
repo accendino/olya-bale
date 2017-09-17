@@ -30,3 +30,11 @@ mixin button(link, buttonClass, buttonValue)
 mixin submit(buttonClass, submitValue)
 	.width-unset
 		input(class= buttonClass, value=submitValue, type="submit").button
+
+mixin addFile(buttonModificator)
+	div
+		input(class= 'inputfile', name='inputfile', id='inputfile', value='', type='file', data-multiple-caption='{count} файлов выбрано', multiple)
+		label(for='inputfile', class= buttonModificator).button
+			| Выбрать файл
+		span.file-status.color-greyLight
+			| файл не выбран
